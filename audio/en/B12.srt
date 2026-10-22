@@ -1,0 +1,24 @@
+1
+00:00:00,000 --> 00:00:04,628
+Section B question three part (a). Compare how they are built.
+
+2
+00:00:04,628 --> 00:00:08,062
+Bitmap: a grid of pixels, or a raster of dots.
+
+3
+00:00:08,062 --> 00:00:13,511
+Vector graphics: defined by mathematical objects — lines, curves, shapes.
+
+4
+00:00:13,511 --> 00:00:19,035
+A good vector example: company logo, typeface, line art, or C A D drawing.
+
+5
+00:00:19,035 --> 00:00:24,186
+Reason: objects scale and edit independently; suit many output sizes.
+
+6
+00:00:24,186 --> 00:00:29,784
+This part does not test enlarge-and-jag; do not only talk about distortion.
+

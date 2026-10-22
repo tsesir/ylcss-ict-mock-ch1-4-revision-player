@@ -1,0 +1,20 @@
+1
+00:00:00,000 --> 00:00:05,745
+Question one: answer A. Raw readings not yet interpreted are best called data.
+
+2
+00:00:05,745 --> 00:00:12,817
+Question two: answer B. Ballot, tally, display — the flow matches I P O: input, process, output.
+
+3
+00:00:12,817 --> 00:00:20,404
+Question three: answer D. A stall layout plan is decoration only — not an information-system component.
+
+4
+00:00:20,404 --> 00:00:24,676
+Question four: answer A. A rain sensor is an input device.
+
+5
+00:00:24,676 --> 00:00:31,968
+Question five: answer C. Information literacy means check author, date, and sources before judging.
+

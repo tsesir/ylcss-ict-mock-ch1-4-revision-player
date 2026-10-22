@@ -1,0 +1,16 @@
+1
+00:00:00,000 --> 00:00:02,428
+That ends today’s Mock walkthrough.
+
+2
+00:00:02,428 --> 00:00:12,487
+Recheck the twenty multiple-choice answers; in Section B, replay the hard parts — two's complement decode, odd parity, and the file-size formula.
+
+3
+00:00:12,487 --> 00:00:14,915
+Replay any tough segment as needed.
+
+4
+00:00:14,915 --> 00:00:15,192
+End.
+

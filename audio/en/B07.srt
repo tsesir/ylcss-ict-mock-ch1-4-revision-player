@@ -1,0 +1,20 @@
+1
+00:00:00,000 --> 00:00:08,789
+Section B question one part (b): name two input devices for checking product codes in the warehouse, each with one advantage.
+
+2
+00:00:08,789 --> 00:00:13,430
+Example: barcode or Q R scanner — fast input, fewer typing errors.
+
+3
+00:00:13,430 --> 00:00:18,000
+Or: handheld data terminal — check beside the shelf in real time.
+
+4
+00:00:18,000 --> 00:00:21,094
+Or: R F I D reader — read many tags at once.
+
+5
+00:00:21,094 --> 00:00:26,016
+Remember: device plus advantage; do not treat output devices as input.
+

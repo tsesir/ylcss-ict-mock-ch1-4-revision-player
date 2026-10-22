@@ -1,0 +1,20 @@
+1
+00:00:00,000 --> 00:00:02,051
+Section B question one part (c).
+
+2
+00:00:02,051 --> 00:00:08,334
+Product codes must be two uppercase letters plus four digits — for example A B one two three four.
+
+3
+00:00:08,334 --> 00:00:11,475
+This validation is a format check, or type check.
+
+4
+00:00:11,475 --> 00:00:18,784
+Purpose: keep codes in the planned pattern; cut invalid codes entering the system; raise accuracy and consistency.
+
+5
+00:00:18,784 --> 00:00:23,784
+Do not write verification or range check — the focus is the character pattern.
+

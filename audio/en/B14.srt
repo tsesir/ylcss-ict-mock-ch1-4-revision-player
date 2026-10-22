@@ -1,0 +1,24 @@
+1
+00:00:00,000 --> 00:00:03,381
+Section B question three part (c). Estimate file size.
+
+2
+00:00:03,381 --> 00:00:12,460
+One thousand nine hundred twenty times one thousand eighty times twenty-four, divided by eight, then divided by one thousand twenty-four squared.
+
+3
+00:00:12,460 --> 00:00:20,788
+First get six million two hundred twenty thousand eight hundred; divide by one million forty-eight thousand five hundred seventy-six.
+
+4
+00:00:20,788 --> 00:00:22,792
+About five point nine three M B.
+
+5
+00:00:22,792 --> 00:00:26,110
+Accept five point nine three to five point nine four.
+
+6
+00:00:26,110 --> 00:00:33,624
+Use one thousand twenty-four squared — not one thousand squared; do not forget divide by eight to convert bits to bytes.
+

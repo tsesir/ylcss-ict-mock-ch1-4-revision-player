@@ -1,0 +1,19 @@
+WEBVTT
+
+00:00:00.000 --> 00:00:06.528
+Section B question two part (c). Data bits one zero one one zero zero one — odd parity.
+
+00:00:06.528 --> 00:00:09.304
+Count the ones: four — an even count.
+
+00:00:09.304 --> 00:00:15.232
+Odd parity needs the total number of ones, including the parity bit, to be odd.
+
+00:00:15.232 --> 00:00:17.408
+So set the parity bit to one.
+
+00:00:17.408 --> 00:00:21.160
+After that there are five ones — odd, as required.
+
+00:00:21.160 --> 00:00:24.912
+Setting zero is even-parity thinking — wrong here.

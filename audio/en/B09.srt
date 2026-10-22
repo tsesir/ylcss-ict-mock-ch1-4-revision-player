@@ -1,0 +1,28 @@
+1
+00:00:00,000 --> 00:00:07,332
+Section B question two part (a). Eight-bit two's complement reading: one zero one one zero zero one zero.
+
+2
+00:00:07,332 --> 00:00:12,360
+Step one: most significant bit M S B is one — so the number is negative.
+
+3
+00:00:12,360 --> 00:00:16,829
+Step two: invert all bits — zero one zero zero one one zero one.
+
+4
+00:00:16,829 --> 00:00:20,879
+Step three: add one — zero one zero zero one one one zero.
+
+5
+00:00:20,879 --> 00:00:26,187
+Place values: sixty-four plus eight plus four plus two equals seventy-eight.
+
+6
+00:00:26,187 --> 00:00:29,259
+So the decimal value is minus seventy-eight.
+
+7
+00:00:29,259 --> 00:00:35,544
+Do not ignore the sign bit and write plus seventy-eight; do not invert without adding one.
+
