@@ -33,6 +33,7 @@ Notion 用 `/embed` 貼上面網址。根目錄有 `_headers`（`frame-ancestors
 - 控制列預設收合，由頂欄向下展開，收合時向上縮回。
 - 全螢幕優先用 Fullscreen API。失敗時加 `.is-fs-fallback` 填滿視窗。舞台以 `min(slotW/1280, slotH/720)` 包含縮放，可以大於 1。
 - 未播放時，第一幀中央有「播放」。最後一節完結、暫停在結尾時，中央有「重播」。
+- 播放中撳舞台（按鈕同控制列以外）會暫停，再撳一下繼續。中央短暫顯示「暫停」。拖曳超過少許距離不會當暫停，避免誤觸進度列。
 - 舞台 1280×720，黑白、方便投影。`vendor/gsap.min.js` 放喺本機，離線不必靠 CDN。
 
 `js/player.js` 讀全域 `CH4_BEATS`／`CH4_CUES`／`CH4_AUDIO_DURATIONS`。呢個名只係程式介面。

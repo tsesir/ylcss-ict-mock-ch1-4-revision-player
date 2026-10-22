@@ -45,6 +45,10 @@ var playBtn;
 var pauseBtn;
 var stagePlayBtn;
 var stageReplayBtn;
+var pauseHint;
+var stageTap = null;
+var stagePaused = false;
+var TAP_SLOP = 14;
 var statusEl;
 var speedSlider;
 var speedReadout;
@@ -433,16 +437,27 @@ function onTick() {
 }
 
 function onComplete() {
+  stagePaused = false;
+  syncPauseHint();
   if (activeAudio) activeAudio.pause();
   renderHud();
 }
 
+function syncPauseHint() {
+  if (!pauseHint) return;
+  var show = !!(stagePaused && master && !master.isActive());
+  pauseHint.classList.toggle("is-on", show);
+  pauseHint.setAttribute("aria-hidden", show ? "false" : "true");
+}
+
 function play() {
   if (!master) return;
+  stagePaused = false;
   if (master.time() >= master.duration() - 0.05) master.time(0);
   master.timeScale(speed);
   clearAudioArms();
   master.play();
+  syncPauseHint();
   onTick();
 }
 
@@ -450,7 +465,55 @@ function pause() {
   if (!master) return;
   master.pause();
   if (activeAudio) activeAudio.pause();
+  syncPauseHint();
   renderHud();
+}
+
+function stageControlTarget(target) {
+  return !!(target && target.closest && target.closest("button, a, input, textarea, select, label"));
+}
+
+function toggleStagePlayback() {
+  if (!master || scrubbing) return;
+  var dur = master.duration() || 0;
+  var t = master.time();
+  var playing = !!(master.isActive() && t < dur - 0.02);
+  if (playing) {
+    stagePaused = true;
+    pause();
+    return;
+  }
+  var atEnd = dur > 0 && t >= dur - 0.05;
+  var atStart = t <= 0.05;
+  if (atEnd || atStart) return;
+  play();
+}
+
+function bindStageTap() {
+  if (!stage) return;
+  stage.addEventListener("pointerdown", function (event) {
+    if (event.pointerType === "mouse" && event.button !== 0) return;
+    if (stageControlTarget(event.target)) {
+      stageTap = null;
+      return;
+    }
+    stageTap = { x: event.clientX, y: event.clientY, id: event.pointerId };
+    try { stage.setPointerCapture(event.pointerId); } catch (err) {}
+  });
+  stage.addEventListener("pointerup", function (event) {
+    if (!stageTap || event.pointerId !== stageTap.id) return;
+    var dx = event.clientX - stageTap.x;
+    var dy = event.clientY - stageTap.y;
+    stageTap = null;
+    if (scrubbing) return;
+    if (dx * dx + dy * dy > TAP_SLOP * TAP_SLOP) return;
+    if (stageControlTarget(event.target)) return;
+    event.preventDefault();
+    toggleStagePlayback();
+  });
+  stage.addEventListener("pointercancel", function (event) {
+    if (stageTap && event.pointerId === stageTap.id) stageTap = null;
+  });
 }
 
 function seekBeat(index) {
@@ -695,6 +758,7 @@ function bind() {
   pauseBtn.addEventListener("click", pause);
   if (stagePlayBtn) stagePlayBtn.addEventListener("click", replay);
   if (stageReplayBtn) stageReplayBtn.addEventListener("click", replay);
+  bindStageTap();
   document.getElementById("prevBtn").addEventListener("click", prev);
   document.getElementById("nextBtn").addEventListener("click", function () {
     seekBeat(itemAt(master.time()).index + 1);
@@ -818,6 +882,7 @@ function cacheDom() {
   pauseBtn = document.getElementById("pauseBtn");
   stagePlayBtn = document.getElementById("stagePlay");
   stageReplayBtn = document.getElementById("stageReplay");
+  pauseHint = document.getElementById("pauseHint");
   statusEl = document.getElementById("status");
   speedSlider = document.getElementById("speedSlider");
   speedReadout = document.getElementById("speedReadout");
