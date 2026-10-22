@@ -1,24 +1,28 @@
 1
-00:00:00,000 --> 00:00:00,635
-Part (b).
+00:00:00,000 --> 00:00:01,638
+Part (b), three marks.
 
 2
-00:00:00,635 --> 00:00:05,437
-In two's complement, the most significant bit M S B is the sign bit.
+00:00:01,638 --> 00:00:06,926
+Linking from (a): the M S B was one, so negative — here we explain why.
 
 3
-00:00:05,437 --> 00:00:08,685
-M S B equals one means the number is negative.
+00:00:06,926 --> 00:00:12,139
+In two's complement, the most significant bit, M S B, is the sign bit.
 
 4
-00:00:08,685 --> 00:00:12,639
-M S B equals zero means non-negative — positive or zero.
+00:00:12,139 --> 00:00:14,149
+M S B equals one: negative.
 
 5
-00:00:12,639 --> 00:00:16,735
-The sign bit takes part in the value and decides the sign.
+00:00:14,149 --> 00:00:17,873
+M S B equals zero: non-negative, positive or zero.
 
 6
-00:00:16,735 --> 00:00:23,160
-Do not only say “it is important” without the sign meaning; do not call M S B a parity bit.
+00:00:17,873 --> 00:00:22,564
+The sign bit also takes part in the value and decides the sign.
+
+7
+00:00:22,564 --> 00:00:28,224
+Do not just write “the M S B is important”, and do not call it a parity bit.
 

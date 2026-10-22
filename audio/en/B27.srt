@@ -1,24 +1,28 @@
 1
-00:00:00,000 --> 00:00:05,374
-Part (c). Data bits one zero one one zero zero one, using odd parity.
+00:00:00,000 --> 00:00:01,713
+Part (c), three marks.
 
 2
-00:00:05,374 --> 00:00:08,255
-Count the ones: four — an even count.
+00:00:01,713 --> 00:00:06,306
+Data bits one zero one one zero zero one, using odd parity.
 
 3
-00:00:08,255 --> 00:00:13,162
-Odd parity needs an odd total of ones including the parity bit.
+00:00:06,306 --> 00:00:10,121
+Stage one: count the ones — four, an even number.
 
 4
-00:00:13,162 --> 00:00:15,420
-So set the parity bit to one.
+00:00:10,121 --> 00:00:15,959
+Stage two: odd parity needs an odd total of ones, including the parity bit.
 
 5
-00:00:15,420 --> 00:00:19,314
-After that there are five ones — odd, as required.
+00:00:15,959 --> 00:00:19,463
+Stage three: so the parity bit is set to one.
 
 6
-00:00:19,314 --> 00:00:23,208
-Setting zero is the even-parity idea — wrong here.
+00:00:19,463 --> 00:00:24,211
+Check: with one added there are five ones — odd, as required.
+
+7
+00:00:24,211 --> 00:00:28,104
+Setting zero is even-parity thinking — wrong here.
 

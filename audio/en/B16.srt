@@ -1,36 +1,68 @@
 1
-00:00:00,000 --> 00:00:08,574
-Question fifteen. Highlight: data bits one zero one one zero one one; “even parity”; what should the parity bit be?
+00:00:00,000 --> 00:00:01,614
+Question fifteen.
 
 2
-00:00:08,574 --> 00:00:15,880
-Useful: count the ones — five, odd; even parity needs an even total, so set the parity bit to one.
+00:00:01,614 --> 00:00:06,361
+Step one: macro scan. It asks the even-parity bit.
 
 3
-00:00:15,880 --> 00:00:20,502
-Useless: transmission medium — does not change the count rule.
+00:00:06,361 --> 00:00:10,918
+One mark. Command words: “parity bit should be”.
 
 4
-00:00:20,502 --> 00:00:24,304
-Option A. Set zero: five plus zero stays odd — cut.
+00:00:10,918 --> 00:00:12,627
+Step two: denoise.
 
 5
-00:00:24,304 --> 00:00:28,181
-Option B. Set one: five plus one = six, even — keep.
+00:00:12,627 --> 00:00:17,279
+Useful, in yellow: one zero one one zero one one.
 
 6
-00:00:28,181 --> 00:00:31,908
-Option C. Cannot compute: bits are complete — cut.
+00:00:17,279 --> 00:00:19,462
+In cyan: “even parity”.
 
 7
-00:00:31,908 --> 00:00:36,083
-Option D. Depends on medium: parity rule does not — cut.
+00:00:19,462 --> 00:00:22,595
+Useless: none — the stem is lean.
 
 8
-00:00:36,083 --> 00:00:40,929
-Five ones is odd; even parity needs a one to make the total even.
+00:00:22,595 --> 00:00:24,304
+Step three: draft.
 
 9
-00:00:40,929 --> 00:00:43,464
-Therefore the correct answer is B.
+00:00:24,304 --> 00:00:26,298
+Count the ones: five.
+
+10
+00:00:26,298 --> 00:00:27,437
+Five is odd.
+
+11
+00:00:27,437 --> 00:00:31,614
+Even parity needs an even total, so add one.
+
+12
+00:00:31,614 --> 00:00:33,228
+Step four: P O E.
+
+13
+00:00:33,228 --> 00:00:35,602
+A, zero: still odd — cut.
+
+14
+00:00:35,602 --> 00:00:39,494
+C, cannot be found: all bits given — cut.
+
+15
+00:00:39,494 --> 00:00:45,191
+D, depends on the medium: the rule ignores the medium — cut.
+
+16
+00:00:45,191 --> 00:00:51,077
+Step five: sanity check and lock. Five plus one is six — even.
+
+17
+00:00:51,077 --> 00:00:53,640
+So the correct answer is B.
 

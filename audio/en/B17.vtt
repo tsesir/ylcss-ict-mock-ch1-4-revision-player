@@ -1,28 +1,52 @@
 WEBVTT
 
-00:00:00.000 --> 00:00:08.614
-Question sixteen. Highlight: a “bitmap” drawing “enlarged several times” for large outdoor print — what is most likely?
+00:00:00.000 --> 00:00:01.480
+Question sixteen.
 
-00:00:08.614 --> 00:00:13.682
-Useful: bitmaps are pixel grids; enlarge and edges go soft and jagged.
+00:00:01.480 --> 00:00:08.529
+Step one: macro scan. It asks what most likely happens when a bitmap is enlarged.
 
-00:00:13.682 --> 00:00:17.880
-Useless: art-class setting — does not change the artefact.
+00:00:08.529 --> 00:00:11.923
+One mark. Command words: “most likely”.
 
-00:00:17.880 --> 00:00:20.631
-Option A. Blurred jagged edges — keep.
+00:00:11.923 --> 00:00:13.490
+Step two: denoise.
 
-00:00:20.631 --> 00:00:25.481
-Option B. File must shrink: enlarge for print ≠ smaller file — cut.
+00:00:13.490 --> 00:00:17.842
+Useful, in yellow: bitmap, enlarged several times.
 
-00:00:25.481 --> 00:00:29.390
-Option C. Colours auto-brighter: not inevitable — cut.
+00:00:17.842 --> 00:00:19.843
+In cyan: “most likely”.
 
-00:00:29.390 --> 00:00:34.095
-Option D. Stays vector-sharp after enlarge: bitmaps cannot — cut.
+00:00:19.843 --> 00:00:25.065
+Useless red herring: art class, outdoor print — kick it out.
 
-00:00:34.095 --> 00:00:37.715
-Bitmap enlarge most often shows jagged distortion.
+00:00:25.065 --> 00:00:26.632
+Step three: draft.
 
-00:00:37.715 --> 00:00:40.176
-Therefore the correct answer is A.
+00:00:26.632 --> 00:00:28.808
+A bitmap is a pixel grid.
+
+00:00:28.808 --> 00:00:31.158
+Enlarge it and pixels grow.
+
+00:00:31.158 --> 00:00:33.507
+Edges go jagged and blurry.
+
+00:00:33.507 --> 00:00:34.987
+Step four: P O E.
+
+00:00:34.987 --> 00:00:39.077
+B, file must shrink: no cause and effect — cut.
+
+00:00:39.077 --> 00:00:42.211
+C, colours brighten: no basis — cut.
+
+00:00:42.211 --> 00:00:46.736
+D, sharp like vector: confuses it with vector — cut.
+
+00:00:46.736 --> 00:00:54.482
+Step five: sanity check and lock. Enlarging a pixel grid shows jagged edges — consistent.
+
+00:00:54.482 --> 00:00:56.832
+So the correct answer is A.

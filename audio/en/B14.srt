@@ -1,36 +1,68 @@
 1
-00:00:00,000 --> 00:00:07,034
-Question thirteen. Highlight: represent “minus fifty-three” in “eight-bit two's complement”.
+00:00:00,000 --> 00:00:01,577
+Question thirteen.
 
 2
-00:00:07,034 --> 00:00:12,386
-Useful: write plus fifty-three in eight bits, then invert and add one.
+00:00:01,577 --> 00:00:08,412
+Step one: macro scan. It asks minus fifty-three in eight-bit two's complement.
 
 3
-00:00:12,386 --> 00:00:16,821
-Useless: I o T wording — does not change the encode steps.
+00:00:08,412 --> 00:00:11,653
+One mark. Command words: “represent”.
 
 4
-00:00:16,821 --> 00:00:23,855
-Option A. Zero zero one one zero one zero one: that is plus fifty-three, not inverted — cut.
+00:00:11,653 --> 00:00:13,231
+Step two: denoise.
 
 5
-00:00:23,855 --> 00:00:29,283
-Option B. One zero one one zero one zero zero: wrong bit pattern — cut.
+00:00:13,231 --> 00:00:17,524
+Useful, in yellow: minus fifty-three, eight bits.
 
 6
-00:00:29,283 --> 00:00:35,400
-Option C. One one zero zero one zero one one: invert-then-add-one result — keep.
+00:00:17,524 --> 00:00:19,977
+In cyan: “two's complement”.
 
 7
-00:00:35,400 --> 00:00:40,599
-Option D. Zero one zero zero one zero one one: wrong sign bit — cut.
+00:00:19,977 --> 00:00:22,869
+Useless: none — the stem is lean.
 
 8
-00:00:40,599 --> 00:00:48,856
-Fifty-three → zero zero one one zero one zero one; invert then add one → one one zero zero one zero one one.
+00:00:22,869 --> 00:00:24,446
+Step three: draft.
 
 9
-00:00:48,856 --> 00:00:51,456
-Therefore the correct answer is C.
+00:00:24,446 --> 00:00:29,177
+Plus fifty-three: zero zero one one zero one zero one.
+
+10
+00:00:29,177 --> 00:00:33,033
+Invert: one one zero zero one zero one zero.
+
+11
+00:00:33,033 --> 00:00:36,888
+Add one: one one zero zero one zero one one.
+
+12
+00:00:36,888 --> 00:00:38,378
+Step four: P O E.
+
+13
+00:00:38,378 --> 00:00:45,825
+A, zero zero one one zero one zero one: that is plus fifty-three, not inverted — cut.
+
+14
+00:00:45,825 --> 00:00:50,820
+B, one zero one one zero one zero zero: wrong bits — cut.
+
+15
+00:00:50,820 --> 00:00:57,216
+D, zero one zero zero one zero one one: sign bit zero, so positive — cut.
+
+16
+00:00:57,216 --> 00:01:05,890
+Step five: sanity check and lock. The top bit is one, so negative, and it matches draft line three.
+
+17
+00:01:05,890 --> 00:01:08,256
+So the correct answer is C.
 

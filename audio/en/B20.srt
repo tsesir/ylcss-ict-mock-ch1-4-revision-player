@@ -1,36 +1,68 @@
 1
-00:00:00,000 --> 00:00:12,512
-Question nineteen. Highlight: uncompressed mono; one thousand twenty-four by seven hundred sixty-eight; one bit per pixel; one K B = one thousand twenty-four bytes.
+00:00:00,000 --> 00:00:01,414
+Question nineteen.
 
 2
-00:00:12,512 --> 00:00:18,157
-Useful: total bits ÷ eight → bytes, then ÷ one thousand twenty-four → K B.
+00:00:01,414 --> 00:00:07,384
+Step one: macro scan. It asks the size of the uncompressed monochrome image.
 
 3
-00:00:18,157 --> 00:00:21,743
-Useless: mono story colour — formula unchanged.
+00:00:07,384 --> 00:00:10,761
+One mark. Command words: “file size about”.
 
 4
-00:00:21,743 --> 00:00:26,931
-Option A. Seven hundred sixty-eight K B: often missed ÷ eight — cut.
+00:00:10,761 --> 00:00:12,175
+Step two: denoise.
 
 5
-00:00:26,931 --> 00:00:32,576
-Option B. One thousand twenty-four K B: mistaking one side for size — cut.
+00:00:12,175 --> 00:00:19,401
+Useful, in yellow: one thousand twenty-four by seven hundred sixty-eight, one bit per pixel.
 
 6
-00:00:32,576 --> 00:00:37,611
-Option C. One hundred ninety-two K B: common mid-step error — cut.
+00:00:19,401 --> 00:00:25,371
+In cyan: “uncompressed” and “one K B equals one thousand twenty-four bytes”.
 
 7
-00:00:37,611 --> 00:00:40,053
-Option D. Ninety-six K B — keep.
+00:00:25,371 --> 00:00:27,963
+Useless: none — the stem is lean.
 
 8
-00:00:40,053 --> 00:00:49,894
-One thousand twenty-four times seven hundred sixty-eight, divided by eight, divided by one thousand twenty-four ≈ ninety-six K B.
+00:00:27,963 --> 00:00:29,377
+Step three: draft.
 
 9
-00:00:49,894 --> 00:00:52,488
-Therefore the correct answer is D.
+00:00:29,377 --> 00:00:34,797
+One thousand twenty-four times seven hundred sixty-eight: total bits.
+
+10
+00:00:34,797 --> 00:00:36,603
+Divide by eight: bytes.
+
+11
+00:00:36,603 --> 00:00:40,609
+Divide by one thousand twenty-four: ninety-six K B.
+
+12
+00:00:40,609 --> 00:00:41,945
+Step four: P O E.
+
+13
+00:00:41,945 --> 00:00:46,972
+A, seven hundred sixty-eight K B: forgot divided by eight — cut.
+
+14
+00:00:46,972 --> 00:00:51,135
+B, one thousand twenty-four K B: random number — cut.
+
+15
+00:00:51,135 --> 00:00:55,141
+C, one hundred ninety-two K B: wrong divisor — cut.
+
+16
+00:00:55,141 --> 00:01:04,095
+Step five: sanity check and lock. Seven hundred sixty-eight kilobits divided by eight is ninety-six — right scale.
+
+17
+00:01:04,095 --> 00:01:06,216
+So the correct answer is D.
 

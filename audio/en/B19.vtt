@@ -1,28 +1,52 @@
 WEBVTT
 
-00:00:00.000 --> 00:00:08.090
-Question eighteen. Highlight: the same clip on a phone and a larger T V still looks detailed — mainly because?
+00:00:00.000 --> 00:00:01.556
+Question eighteen.
 
-00:00:08.090 --> 00:00:13.459
-Useful: clear across screen sizes → higher pixel resolution keeps detail.
+00:00:01.556 --> 00:00:07.433
+Step one: macro scan. It asks why detail stays clear on a bigger TV.
 
-00:00:13.459 --> 00:00:16.548
-Useless: phone or T V brand — not the key.
+00:00:07.433 --> 00:00:11.064
+One mark. Command words: “mainly because”.
 
-00:00:16.548 --> 00:00:20.446
-Option A. Lower bit rate: usually hurts detail — cut.
+00:00:11.064 --> 00:00:12.619
+Step two: denoise.
 
-00:00:20.446 --> 00:00:25.153
-Option B. Fewer audio tracks: unrelated to picture detail — cut.
+00:00:12.619 --> 00:00:16.163
+Useful, in yellow: “details still clear”.
 
-00:00:25.153 --> 00:00:29.271
-Option C. Smaller file: does not guarantee detail — cut.
+00:00:16.163 --> 00:00:20.139
+In cyan: “mainly because” and “larger screen”.
 
-00:00:29.271 --> 00:00:32.286
-Option D. Higher pixel resolution — keep.
+00:00:20.139 --> 00:00:24.893
+Useless red herring: phone and TV models — kick it out.
 
-00:00:32.286 --> 00:00:36.331
-Detail stays clear mainly from higher pixel resolution.
+00:00:24.893 --> 00:00:26.449
+Step three: draft.
 
-00:00:36.331 --> 00:00:38.832
-Therefore the correct answer is D.
+00:00:26.449 --> 00:00:29.042
+Detail depends on pixel count.
+
+00:00:29.042 --> 00:00:32.327
+More pixels stay clear on big screens.
+
+00:00:32.327 --> 00:00:35.092
+That is higher pixel resolution.
+
+00:00:35.092 --> 00:00:36.562
+Step four: P O E.
+
+00:00:36.562 --> 00:00:40.538
+A, lower bit rate: usually loses detail — cut.
+
+00:00:40.538 --> 00:00:44.687
+B, fewer audio tracks: sound, not picture — cut.
+
+00:00:44.687 --> 00:00:48.663
+C, smaller file: no guarantee of detail — cut.
+
+00:00:48.663 --> 00:00:57.738
+Step five: sanity check and lock. Clear detail comes from pixel count — consistent with pixel resolution.
+
+00:00:57.738 --> 00:01:00.072
+So the correct answer is D.

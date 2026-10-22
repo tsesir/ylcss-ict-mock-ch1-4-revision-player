@@ -1,28 +1,52 @@
 WEBVTT
 
-00:00:00.000 --> 00:00:09.647
-Question seven. Highlight: each sold ticket gets a “venue-unique” number used to “identify” that ticket and link showtime and seat.
+00:00:00.000 --> 00:00:01.269
+Question seven.
 
-00:00:09.647 --> 00:00:13.476
-Useful: uniquely identifying a record = primary key.
+00:00:01.269 --> 00:00:07.189
+Step one: macro scan. It asks what the unique ticket number should be.
 
-00:00:13.476 --> 00:00:17.379
-Useless: cinema theme — does not change the key role.
+00:00:07.189 --> 00:00:10.573
+One mark. Command words: “best used as”.
 
-00:00:17.379 --> 00:00:21.577
-Option A. Remark-field text: not guaranteed unique — cut.
+00:00:10.573 --> 00:00:12.095
+Step two: denoise.
 
-00:00:21.577 --> 00:00:26.069
-Option B. Parity bit: error check, not ticket identity — cut.
+00:00:12.095 --> 00:00:14.886
+Useful, in yellow: ticket number.
 
-00:00:26.069 --> 00:00:28.205
-Option C. Primary key — keep.
+00:00:14.886 --> 00:00:18.777
+In cyan: “unique in the house” and “identify”.
 
-00:00:28.205 --> 00:00:33.065
-Option D. File-compression parameter: unrelated to identity — cut.
+00:00:18.777 --> 00:00:23.345
+Useless red herring: the cinema setting — kick it out.
 
-00:00:33.065 --> 00:00:37.336
-Venue-unique and used to identify — best as a primary key.
+00:00:23.345 --> 00:00:24.867
+Step three: draft.
 
-00:00:37.336 --> 00:00:39.840
-Therefore the correct answer is C.
+00:00:24.867 --> 00:00:26.812
+Unique plus identifies.
+
+00:00:26.812 --> 00:00:28.673
+That is a primary key.
+
+00:00:28.673 --> 00:00:31.295
+It also links session and seat.
+
+00:00:31.295 --> 00:00:32.733
+Step four: P O E.
+
+00:00:32.733 --> 00:00:36.539
+A, remarks text: not guaranteed unique — cut.
+
+00:00:36.539 --> 00:00:40.346
+B, parity bit: only for error checking — cut.
+
+00:00:40.346 --> 00:00:45.251
+D, compression setting: nothing to do with identity — cut.
+
+00:00:45.251 --> 00:00:53.540
+Step five: sanity check and lock. A primary key must be unique and identify the record — both fit.
+
+00:00:53.540 --> 00:00:55.824
+So the correct answer is C.

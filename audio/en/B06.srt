@@ -1,36 +1,68 @@
 1
-00:00:00,000 --> 00:00:09,077
-Question five. Highlight: an online article claims “all social posts are untrustworthy”; ask what information literacy looks like.
+00:00:00,000 --> 00:00:01,181
+Question five.
 
 2
-00:00:09,077 --> 00:00:14,454
-Useful: literacy = verify, then judge — neither blind trust nor blind reject.
+00:00:01,181 --> 00:00:06,414
+Step one: macro scan. It asks the information-literate action.
 
 3
-00:00:14,454 --> 00:00:19,761
-Useless: how sensational the headline is — does not decide the right action.
+00:00:06,414 --> 00:00:09,283
+One mark. Command words: “action”.
 
 4
-00:00:19,761 --> 00:00:23,810
-Option A. Forward at once — spreading without check — cut.
+00:00:09,283 --> 00:00:10,802
+Step two: denoise.
 
 5
-00:00:23,810 --> 00:00:28,489
-Option B. Delete because the title is loud, and never verify — cut.
+00:00:10,802 --> 00:00:15,781
+Useful, in yellow: the claim “never trust any social post”.
 
 6
-00:00:28,489 --> 00:00:33,865
-Option C. Check author, date, citations and other reports, then judge — keep.
+00:00:15,781 --> 00:00:20,929
+In cyan: the absolute word “all”, and “information literacy”.
 
 7
-00:00:33,865 --> 00:00:37,077
-Option D. Conclude from the title alone — cut.
+00:00:20,929 --> 00:00:26,330
+Useless red herring: how sensational the title is — kick it out.
 
 8
-00:00:37,077 --> 00:00:40,778
-Literacy centres on verifying sources before judging.
+00:00:26,330 --> 00:00:27,849
+Step three: draft.
 
 9
-00:00:40,778 --> 00:00:43,152
-Therefore the correct answer is C.
+00:00:27,849 --> 00:00:30,887
+Literacy: verify first, judge later.
+
+10
+00:00:30,887 --> 00:00:33,841
+No blind trust, no blind rejection.
+
+11
+00:00:33,841 --> 00:00:36,204
+Check author, date, sources.
+
+12
+00:00:36,204 --> 00:00:37,639
+Step four: P O E.
+
+13
+00:00:37,639 --> 00:00:41,942
+A, forward at once: spreads without checking — cut.
+
+14
+00:00:41,942 --> 00:00:46,162
+B, delete without checking: blind rejection — cut.
+
+15
+00:00:46,162 --> 00:00:49,538
+D, judge by title only: one-sided — cut.
+
+16
+00:00:49,538 --> 00:00:59,833
+Step five: sanity check and lock. The one left checks author, date and sources before judging — exactly verify-then-judge.
+
+17
+00:00:59,833 --> 00:01:02,112
+So the correct answer is C.
 

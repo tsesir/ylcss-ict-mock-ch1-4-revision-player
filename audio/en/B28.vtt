@@ -1,19 +1,22 @@
 WEBVTT
 
-00:00:00.000 --> 00:00:04.356
-Section B question three (a). Compare how they are built.
+00:00:00.000 --> 00:00:04.120
+Section B question three, part (a), four marks, four slots.
 
-00:00:04.356 --> 00:00:06.572
-Bitmap: made of a pixel grid.
+00:00:04.120 --> 00:00:08.798
+Two marks for how they are built, two for an example with a reason.
 
-00:00:06.572 --> 00:00:11.463
-Vector: defined by mathematical objects — lines, curves, shapes.
+00:00:08.798 --> 00:00:11.312
+Bitmap: built from a grid of pixels.
 
-00:00:11.463 --> 00:00:16.889
-Good vector examples: company logo, fonts, line art, or C A D drawings.
+00:00:11.312 --> 00:00:16.409
+Vector: defined by mathematical objects such as lines, curves and shapes.
 
-00:00:16.889 --> 00:00:22.163
-Reason: objects scale and edit independently; suit many output sizes.
+00:00:16.409 --> 00:00:21.577
+A good vector example: a company logo, fonts, line art, or C A D drawings.
 
-00:00:22.163 --> 00:00:28.200
-This item does not test enlarge jaggedness — do not only talk about distortion.
+00:00:21.577 --> 00:00:27.303
+Reason: objects can be scaled and edited independently, suiting many output sizes.
+
+00:00:27.303 --> 00:00:33.168
+Enlargement jaggedness is not tested — talking only about distortion scores nothing.

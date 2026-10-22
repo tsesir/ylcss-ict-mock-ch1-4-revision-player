@@ -1,36 +1,68 @@
 1
-00:00:00,000 --> 00:00:09,266
-Question ten. Highlight: some fields are “required”; before submit the system checks they “have content” and “must not be blank”.
+00:00:00,000 --> 00:00:01,119
+Question ten.
 
 2
-00:00:09,266 --> 00:00:13,647
-Useful: checking that something was entered = presence check.
+00:00:01,119 --> 00:00:07,492
+Step one: macro scan. It asks which check tests that fields are not blank.
 
 3
-00:00:13,647 --> 00:00:18,603
-Useless: inter-school contest theme — does not change the check type.
+00:00:07,492 --> 00:00:10,506
+One mark. Command words: “this is”.
 
 4
-00:00:18,603 --> 00:00:20,901
-Option A. Presence check — keep.
+00:00:10,506 --> 00:00:12,056
+Step two: denoise.
 
 5
-00:00:20,901 --> 00:00:25,427
-Option B. Range check: numeric bounds; stem has no range — cut.
+00:00:12,056 --> 00:00:14,983
+Useful, in yellow: certain fields.
 
 6
-00:00:25,427 --> 00:00:30,383
-Option C. Type check: correct data type; stem focuses on blank — cut.
+00:00:14,983 --> 00:00:18,772
+In cyan: “required” and “must not be blank”.
 
 7
-00:00:30,383 --> 00:00:34,764
-Option D. Check digit: checksum maths; not in the stem — cut.
+00:00:18,772 --> 00:00:23,939
+Useless red herring: the inter-school contest — kick it out.
 
 8
-00:00:34,764 --> 00:00:37,278
-Must not be blank = presence check.
+00:00:23,939 --> 00:00:25,489
+Step three: draft.
 
 9
-00:00:37,278 --> 00:00:39,720
-Therefore the correct answer is A.
+00:00:25,489 --> 00:00:27,814
+Only checks: filled or not?
+
+10
+00:00:27,814 --> 00:00:30,311
+Filled or not means presence.
+
+11
+00:00:30,311 --> 00:00:31,603
+Presence check.
+
+12
+00:00:31,603 --> 00:00:33,067
+Step four: P O E.
+
+13
+00:00:33,067 --> 00:00:36,855
+B, range check: no bounds in the stem — cut.
+
+14
+00:00:36,855 --> 00:00:40,214
+C, type check: not checking type — cut.
+
+15
+00:00:40,214 --> 00:00:44,347
+D, check digit: no check code in the stem — cut.
+
+16
+00:00:44,347 --> 00:00:52,011
+Step five: sanity check and lock. “Must not be blank” matches the presence check exactly.
+
+17
+00:00:52,011 --> 00:00:54,336
+So the correct answer is A.
 

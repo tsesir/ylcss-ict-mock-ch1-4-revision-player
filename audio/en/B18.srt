@@ -1,36 +1,68 @@
 1
-00:00:00,000 --> 00:00:06,821
-Question seventeen. Highlight: “sixteen-bit” colour depth; how many colours can be represented?
+00:00:00,000 --> 00:00:01,592
+Question seventeen.
 
 2
-00:00:06,821 --> 00:00:11,632
-Useful: count = two to the power of bit depth = two to the sixteen.
+00:00:01,592 --> 00:00:07,541
+Step one: macro scan. It asks how many colours sixteen-bit depth gives.
 
 3
-00:00:11,632 --> 00:00:15,222
-Useless: camera brand — does not change the maths.
+00:00:07,541 --> 00:00:11,312
+One mark. Command words: “number of colours”.
 
 4
-00:00:15,222 --> 00:00:19,387
-Option A. Sixteen: mistaking depth for colour count — cut.
+00:00:11,312 --> 00:00:12,820
+Step two: denoise.
 
 5
-00:00:19,387 --> 00:00:25,275
-Option B. Sixty-five thousand five hundred thirty-six = two to the sixteen — keep.
+00:00:12,820 --> 00:00:15,502
+Useful, in yellow: sixteen bits.
 
 6
-00:00:25,275 --> 00:00:31,235
-Option C. Thirty-two thousand seven hundred sixty-eight = two to the fifteen — cut.
+00:00:15,502 --> 00:00:19,273
+In cyan: “per pixel” and “number of colours”.
 
 7
-00:00:31,235 --> 00:00:35,327
-Option D. Two hundred fifty-six = two to the eight — cut.
+00:00:19,273 --> 00:00:23,462
+Useless red herring: digital camera — kick it out.
 
 8
-00:00:35,327 --> 00:00:41,431
-Sixteen-bit depth → two to the sixteen = sixty-five thousand five hundred thirty-six.
+00:00:23,462 --> 00:00:24,971
+Step three: draft.
 
 9
-00:00:41,431 --> 00:00:43,872
-Therefore the correct answer is B.
+00:00:24,971 --> 00:00:27,903
+Colours equal two to the bit depth.
+
+10
+00:00:27,903 --> 00:00:29,495
+Two to the sixteen.
+
+11
+00:00:29,495 --> 00:00:33,182
+Sixty-five thousand five hundred thirty-six.
+
+12
+00:00:33,182 --> 00:00:34,607
+Step four: P O E.
+
+13
+00:00:34,607 --> 00:00:38,378
+A, sixteen: bit count taken as colours — cut.
+
+14
+00:00:38,378 --> 00:00:44,662
+C, thirty-two thousand seven hundred sixty-eight: two to the fifteen — cut.
+
+15
+00:00:44,662 --> 00:00:48,768
+D, two hundred fifty-six: two to the eight — cut.
+
+16
+00:00:48,768 --> 00:00:56,226
+Step five: sanity check and lock. Sixteen bits gives two to the sixteen — the value fits.
+
+17
+00:00:56,226 --> 00:00:58,488
+So the correct answer is B.
 

@@ -1,36 +1,68 @@
 1
-00:00:00,000 --> 00:00:11,263
-Question twelve. Highlight: binary one zero one one zero one; counting “from the right”, the “third bit whose face value is one” — what is its place value?
+00:00:00,000 --> 00:00:01,327
+Question twelve.
 
 2
-00:00:11,263 --> 00:00:22,381
-Useful: from the right, one-bits sit at two to the zero, two to the two, two to the three… the third is two to the three. Say place value — not “weight”.
+00:00:01,327 --> 00:00:08,130
+Step one: macro scan. It asks the place value of the third one-bit from the right.
 
 3
-00:00:22,381 --> 00:00:27,613
-Useless: the whole binary total — the question does not ask for the sum.
+00:00:08,130 --> 00:00:11,365
+One mark. Command words: “place value”.
 
 4
-00:00:27,613 --> 00:00:31,609
-Option A. Two to the one — not the third one-bit — cut.
+00:00:11,365 --> 00:00:12,858
+Step two: denoise.
 
 5
-00:00:31,609 --> 00:00:35,969
-Option B. Two to the two — that is the second one-bit — cut.
+00:00:12,858 --> 00:00:16,591
+Useful, in yellow: one zero one one zero one.
 
 6
-00:00:35,969 --> 00:00:38,440
-Option C. Two to the three — keep.
+00:00:16,591 --> 00:00:22,066
+In cyan: “from right to left” and “third bit with face value one”.
 
 7
-00:00:38,440 --> 00:00:42,582
-Option D. Two to the four — one place further left — cut.
+00:00:22,066 --> 00:00:27,707
+Useless red herring: the whole number’s decimal value — kick it out.
 
 8
-00:00:42,582 --> 00:00:47,377
-The third one-bit from the right has place value two to the three.
+00:00:27,707 --> 00:00:29,201
+Step three: draft.
 
 9
-00:00:47,377 --> 00:00:49,848
-Therefore the correct answer is C.
+00:00:29,201 --> 00:00:33,100
+From the right: two to the zero is one — first.
+
+10
+00:00:33,100 --> 00:00:37,911
+Two to the one is zero, skip; two squared is one — second.
+
+11
+00:00:37,911 --> 00:00:39,985
+Two cubed is one — third.
+
+12
+00:00:39,985 --> 00:00:41,395
+Step four: P O E.
+
+13
+00:00:41,395 --> 00:00:44,879
+A, two to the one: that bit is zero — cut.
+
+14
+00:00:44,879 --> 00:00:48,032
+B, two squared: only the second — cut.
+
+15
+00:00:48,032 --> 00:00:51,599
+D, two to the four: that bit is zero — cut.
+
+16
+00:00:51,599 --> 00:00:58,816
+Step five: sanity check and lock. Counting to the third one lands exactly on two cubed.
+
+17
+00:00:58,816 --> 00:01:01,056
+So the correct answer is C.
 

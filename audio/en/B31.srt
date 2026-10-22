@@ -1,20 +1,20 @@
 1
-00:00:00,000 --> 00:00:02,350
+00:00:00,000 --> 00:00:02,453
 That ends today’s Mock walkthrough.
 
 2
-00:00:02,350 --> 00:00:08,125
-For the twenty multiple-choice items: highlight, eliminate, then fill the letter last.
+00:00:02,453 --> 00:00:11,142
+For the twenty multiple-choice items, remember five steps: scan, denoise, draft, P O E, sanity check and lock — letter last.
 
 3
-00:00:08,125 --> 00:00:18,131
-For Section B, replay especially: two's-complement decode to minus seventy-eight, odd parity bit one, and the five point nine three M B size working.
+00:00:11,142 --> 00:00:20,392
+In Section B, replay: two's-complement decode to minus seventy-eight, odd parity bit one, and the five point nine three M B working.
 
 4
-00:00:18,131 --> 00:00:20,011
-Replay hard beats as needed.
+00:00:20,392 --> 00:00:23,336
+Go back to any hard beat and listen again.
 
 5
-00:00:20,011 --> 00:00:20,280
+00:00:23,336 --> 00:00:23,616
 End.
 

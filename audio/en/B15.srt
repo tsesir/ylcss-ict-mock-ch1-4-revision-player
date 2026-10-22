@@ -1,36 +1,68 @@
 1
-00:00:00,000 --> 00:00:07,707
-Question fourteen. Highlight: the string Hello; “standard A S C I I”; “one byte per character”.
+00:00:00,000 --> 00:00:01,686
+Question fourteen.
 
 2
-00:00:07,707 --> 00:00:11,926
-Useful: five characters times one byte = five bytes.
+00:00:01,686 --> 00:00:08,242
+Step one: macro scan. It asks storage for Hello in standard A S C I I.
 
 3
-00:00:11,926 --> 00:00:16,145
-Useless: what Hello means — does not change storage.
+00:00:08,242 --> 00:00:12,175
+One mark. Command words: “storage needed”.
 
 4
-00:00:16,145 --> 00:00:18,417
-Option A. Five bytes — keep.
+00:00:12,175 --> 00:00:13,861
+Step two: denoise.
 
 5
-00:00:18,417 --> 00:00:23,203
-Option B. Six bytes: often wrongly adds a terminator — cut.
+00:00:13,861 --> 00:00:17,139
+Useful, in yellow: Hello, one byte.
 
 6
-00:00:23,203 --> 00:00:27,828
-Option C. Ten bytes: maybe counting two bytes each — cut.
+00:00:17,139 --> 00:00:21,821
+In cyan: “standard A S C I I” and “per character”.
 
 7
-00:00:27,828 --> 00:00:32,696
-Option D. Forty bytes: maybe counting bits without ÷8 — cut.
+00:00:21,821 --> 00:00:26,972
+Useless red herring: what the word means — kick it out.
 
 8
-00:00:32,696 --> 00:00:36,266
-Five characters, one byte each — five bytes.
+00:00:26,972 --> 00:00:28,658
+Step three: draft.
 
 9
-00:00:36,266 --> 00:00:39,024
-Therefore the correct answer is A.
+00:00:28,658 --> 00:00:31,655
+H, e, l, l, o — five characters.
+
+10
+00:00:31,655 --> 00:00:33,528
+Five times one byte.
+
+11
+00:00:33,528 --> 00:00:34,558
+Five bytes.
+
+12
+00:00:34,558 --> 00:00:36,150
+Step four: P O E.
+
+13
+00:00:36,150 --> 00:00:40,365
+B, six bytes: extra terminator counted — cut.
+
+14
+00:00:40,365 --> 00:00:44,673
+C, ten bytes: treated as two bytes each — cut.
+
+15
+00:00:44,673 --> 00:00:48,232
+D, forty bytes: counted in bits — cut.
+
+16
+00:00:48,232 --> 00:00:55,911
+Step five: sanity check and lock. Five characters, one byte each — the count fits.
+
+17
+00:00:55,911 --> 00:00:58,440
+So the correct answer is A.
 

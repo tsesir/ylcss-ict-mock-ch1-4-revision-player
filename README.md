@@ -7,7 +7,7 @@ YLCSS S4 ICT 純播放旁白講解。培進 Book A 第一章至第四章，31 �
 | 項目 | 值 |
 |------|-----|
 | 節數 | 31（B01 開場 · B02–B21 甲部逐題 · B22–B30 乙部 · B31 結尾） |
-| `js/beats.js` 總長 | **1574.8 秒**（約 26.2 分鐘） |
+| `js/beats.js` 總長 | **1836.2 秒**（約 30.6 分鐘） |
 | 聲線 | 粵語、普通話、English |
 | 情境 | 網店訂單／倉庫；二進制補碼、奇偶校驗、圖像檔大小 |
 
@@ -34,7 +34,8 @@ Notion 用 `/embed` 貼上面網址。根目錄有 `_headers`（`frame-ancestors
 - 全螢幕優先用 Fullscreen API。失敗時加 `.is-fs-fallback` 填滿視窗。舞台以 `min(slotW/1280, slotH/720)` 包含縮放，可以大於 1。
 - 未播放時，第一幀中央有「播放」。最後一節完結、暫停在結尾時，中央有「重播」。
 - 播放中撳舞台（按鈕同控制列以外）會暫停，再撳一下繼續。中央短暫顯示「暫停」。拖曳超過少許距離不會當暫停，避免誤觸進度列。
-- 舞台 1280×720，黑白、方便投影。`vendor/gsap.min.js` 放喺本機，離線不必靠 CDN。
+- 舞台 1280×720。外殼保持高對比。講解標記：數值黃 `#FFE600`、條件青 `#00E5FF`、POE 紅 `#FF1744`、鎖定綠 `#00E676`。甲部跟五步：宏觀定題、降噪、草稿、POE、鎖定；答案字母在第五步先出現。
+- 倉鼠 Hammy 係原子筆手繪，大約佔畫面闊度 7%，留在右邊空白，不蓋題幹同選項。`vendor/gsap.min.js` 放喺本機。
 
 `js/player.js` 讀全域 `CH4_BEATS`／`CH4_CUES`／`CH4_AUDIO_DURATIONS`。呢個名只係程式介面。
 
@@ -49,7 +50,7 @@ Notion 用 `/embed` 貼上面網址。根目錄有 `_headers`（`frame-ancestors
 
 ## 聲軌
 
-- `audio/{yue,cmn,en}/B01.mp3` … `B31.mp3`，同名 `.vtt` 與 `.srt`（93 段，逐節播放，不解整軌）
+- `audio/{yue,cmn,en}/B01.mp3` … `B31.mp3`，同名 `.vtt` 與 `.srt`（93 段，逐節播放）
 - `audio/manifest.json` 列出 `lang`、`beat`、`duration_s`
 - 粵語／普通話：英文片段前後 EN pad **0.05 秒**，已燒錄在 mp3。English 聲線沒有 EN pad。
 - 粵語「正」以 zing3 合成；字幕仍寫「正」。

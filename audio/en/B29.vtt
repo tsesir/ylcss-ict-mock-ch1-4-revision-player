@@ -1,13 +1,16 @@
 WEBVTT
 
-00:00:00.000 --> 00:00:02.808
-Part (b). Two steps in image digitisation.
+00:00:00.000 --> 00:00:01.440
+Part (b), three marks.
 
-00:00:02.808 --> 00:00:10.028
-Sampling: measure or take image samples at intervals in space or time; links to resolution or sampling rate.
+00:00:01.440 --> 00:00:09.095
+Sampling: measuring or taking image samples at set intervals in space or time; linked to resolution or sampling rate.
 
-00:00:10.028 --> 00:00:19.053
-Quantization: map each sample’s continuous brightness or colour to a finite set of discrete levels; links to colour depth or bit depth.
+00:00:09.095 --> 00:00:18.648
+Quantization: mapping each sample’s continuous brightness or colour to a finite set of discrete levels; linked to colour depth, that is bit depth.
 
-00:00:19.053 --> 00:00:21.192
+00:00:18.648 --> 00:00:23.490
+Key words: sampling means “samples”, quantization means “discrete levels”.
+
+00:00:23.490 --> 00:00:25.584
 Do not swap the two definitions.

@@ -1,28 +1,52 @@
 WEBVTT
 
-00:00:00.000 --> 00:00:07.011
-Question four. Highlight: a “rain sensor” used to “measure” live rainfall — what class of device?
+00:00:00.000 --> 00:00:01.180
+Question four.
 
-00:00:07.011 --> 00:00:11.564
-Useful: a sensor feeds measured values into the system = input.
+00:00:01.180 --> 00:00:07.505
+Step one: macro scan. It asks what kind of device the rain-gauge sensor is.
 
-00:00:11.564 --> 00:00:16.479
-Useless: where the weather station sits — does not change the class.
+00:00:07.505 --> 00:00:10.709
+One mark. Command words: “belongs to”.
 
-00:00:16.479 --> 00:00:18.647
-Option A. Input device — keep.
+00:00:10.709 --> 00:00:12.227
+Step two: denoise.
 
-00:00:18.647 --> 00:00:23.273
-Option B. Output device: a sensor does not output results — cut.
+00:00:12.227 --> 00:00:17.033
+Useful, in yellow: rain-gauge sensor, real-time rainfall.
 
-00:00:23.273 --> 00:00:27.609
-Option C. Display device: stem never mentions display — cut.
+00:00:17.033 --> 00:00:18.635
+In cyan: “measure”.
 
-00:00:27.609 --> 00:00:31.874
-Option D. Print device: stem never mentions printing — cut.
+00:00:18.635 --> 00:00:24.032
+Useless red herring: where the weather station is — kick it out.
 
-00:00:31.874 --> 00:00:35.271
-Measure then feed in — that is an input device.
+00:00:24.032 --> 00:00:25.549
+Step three: draft.
 
-00:00:35.271 --> 00:00:37.728
-Therefore the correct answer is A.
+00:00:25.549 --> 00:00:29.850
+Outside values enter the system through the sensor.
+
+00:00:29.850 --> 00:00:32.632
+Flow goes from outside to inside.
+
+00:00:32.632 --> 00:00:34.572
+Flowing in means input.
+
+00:00:34.572 --> 00:00:36.005
+Step four: P O E.
+
+00:00:36.005 --> 00:00:39.378
+B, output device: wrong direction — cut.
+
+00:00:39.378 --> 00:00:43.257
+C, display device: no display mentioned — cut.
+
+00:00:43.257 --> 00:00:47.304
+D, printing device: no printing mentioned — cut.
+
+00:00:47.304 --> 00:00:54.387
+Step five: sanity check and lock. Data flows into the system, consistent with input.
+
+00:00:54.387 --> 00:00:56.664
+So the correct answer is A.

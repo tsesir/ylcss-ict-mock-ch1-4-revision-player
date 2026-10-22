@@ -1,28 +1,52 @@
 WEBVTT
 
-00:00:00.000 --> 00:00:12.655
-Question twenty. Highlight: a web logo needs “both” “background transparency” and “simple frame animation”; stem notes J P E G, B M P, T I F F usually lack both.
+00:00:00.000 --> 00:00:01.438
+Question twenty.
 
-00:00:12.655 --> 00:00:15.720
-Useful: both features together → G I F.
+00:00:01.438 --> 00:00:08.717
+Step one: macro scan. It asks the format for a transparent, simply animated logo.
 
-00:00:15.720 --> 00:00:20.279
-Useless: logo art style — does not change the format pick.
+00:00:08.717 --> 00:00:12.401
+One mark. Command words: “more suitable”.
 
-00:00:20.279 --> 00:00:25.624
-Option A. J P E G: no transparency, no simple frame animation — cut.
+00:00:12.401 --> 00:00:14.019
+Step two: denoise.
 
-00:00:25.624 --> 00:00:28.847
-Option B. B M P: generally neither — cut.
+00:00:14.019 --> 00:00:19.950
+Useful, in yellow: transparent background, simple frame animation.
 
-00:00:28.847 --> 00:00:34.034
-Option C. G I F: can do transparency plus simple animation — keep.
+00:00:19.950 --> 00:00:24.174
+In cyan: “both at once”, plus the bracket hint.
 
-00:00:34.034 --> 00:00:39.143
-Option D. T I F F: stem already says it usually lacks both — cut.
+00:00:24.174 --> 00:00:28.397
+Useless red herring: logo design — kick it out.
 
-00:00:39.143 --> 00:00:43.624
-Need transparency and simple animation — G I F fits best.
+00:00:28.397 --> 00:00:30.015
+Step three: draft.
 
-00:00:43.624 --> 00:00:46.296
-Therefore the correct answer is C.
+00:00:30.015 --> 00:00:32.531
+Condition one: transparency.
+
+00:00:32.531 --> 00:00:35.407
+Condition two: simple animation.
+
+00:00:35.407 --> 00:00:37.474
+Both, at the same time.
+
+00:00:37.474 --> 00:00:39.002
+Step four: P O E.
+
+00:00:39.002 --> 00:00:42.057
+A, J P E G: no transparency — cut.
+
+00:00:42.057 --> 00:00:45.742
+B, B M P: ruled out by the bracket — cut.
+
+00:00:45.742 --> 00:00:49.606
+D, T I F F: ruled out by the bracket — cut.
+
+00:00:49.606 --> 00:00:57.694
+Step five: sanity check and lock. Only the remaining format meets both conditions at once.
+
+00:00:57.694 --> 00:01:00.120
+So the correct answer is C.

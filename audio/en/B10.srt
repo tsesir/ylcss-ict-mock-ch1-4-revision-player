@@ -1,36 +1,68 @@
 1
-00:00:00,000 --> 00:00:06,988
-Question nine. Highlight: a gear-loan system “applies data control” — what is the main purpose?
+00:00:00,000 --> 00:00:01,248
+Question nine.
 
 2
-00:00:06,988 --> 00:00:11,916
-Useful: data-control aims — accuracy, completeness, authorised use.
+00:00:01,248 --> 00:00:06,864
+Step one: macro scan. It asks the main purpose of data control.
 
 3
-00:00:11,916 --> 00:00:16,403
-Useless: sports-room setting — does not redefine the purpose.
+00:00:06,864 --> 00:00:10,429
+One mark. Command words: “main purpose”.
 
 4
-00:00:16,403 --> 00:00:21,478
-Option A. Add UI steps on purpose to deter loans — not the aim — cut.
+00:00:10,429 --> 00:00:12,034
+Step two: denoise.
 
 5
-00:00:21,478 --> 00:00:26,480
-Option B. Ensure data are accurate, complete, and authorised — keep.
+00:00:12,034 --> 00:00:16,134
+Useful, in yellow: loan records, data control.
 
 6
-00:00:26,480 --> 00:00:32,143
-Option C. Raise screen resolution — display hardware, not data control — cut.
+00:00:16,134 --> 00:00:18,273
+In cyan: “main purpose”.
 
 7
-00:00:32,143 --> 00:00:36,998
-Option D. Raise C P U clock — performance, not data control — cut.
+00:00:18,273 --> 00:00:22,552
+Useless red herring: PE equipment — kick it out.
 
 8
-00:00:36,998 --> 00:00:44,059
-Data control is about accuracy, completeness, and authority — not deterrence or hardware tweaks.
+00:00:22,552 --> 00:00:24,156
+Step three: draft.
 
 9
-00:00:44,059 --> 00:00:46,560
-Therefore the correct answer is B.
+00:00:24,156 --> 00:00:26,652
+Data control in three words:
+
+10
+00:00:26,652 --> 00:00:29,415
+accurate, complete, authorised.
+
+11
+00:00:29,415 --> 00:00:32,446
+Nothing to do with hardware speed.
+
+12
+00:00:32,446 --> 00:00:33,961
+Step four: P O E.
+
+13
+00:00:33,961 --> 00:00:37,527
+A, deter borrowing: not a purpose — cut.
+
+14
+00:00:37,527 --> 00:00:42,073
+C, raise screen resolution: display hardware — cut.
+
+15
+00:00:42,073 --> 00:00:45,728
+D, speed up the clock: performance — cut.
+
+16
+00:00:45,728 --> 00:00:54,017
+Step five: sanity check and lock. The one left has all three: accurate, complete, authorised.
+
+17
+00:00:54,017 --> 00:00:56,424
+So the correct answer is B.
 

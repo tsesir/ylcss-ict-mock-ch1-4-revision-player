@@ -1,28 +1,52 @@
 WEBVTT
 
-00:00:00.000 --> 00:00:06.099
-Question eleven. Highlight: convert decimal “forty-three” to “hexadecimal”.
+00:00:00.000 --> 00:00:01.489
+Question eleven.
 
-00:00:06.099 --> 00:00:10.735
-Useful: divide by sixteen; remainder eleven is written B.
+00:00:01.489 --> 00:00:07.537
+Step one: macro scan. It asks decimal forty-three in hexadecimal.
 
-00:00:10.735 --> 00:00:15.208
-Useless: sensor story — does not change the conversion.
+00:00:07.537 --> 00:00:11.072
+One mark. Command words: “convert to”.
 
-00:00:15.208 --> 00:00:21.145
-Option A. Two five hex: two times sixteen plus five = thirty-seven — cut.
+00:00:11.072 --> 00:00:12.747
+Step two: denoise.
 
-00:00:21.145 --> 00:00:27.000
-Option B. Two B hex: two times sixteen plus eleven = forty-three — keep.
+00:00:12.747 --> 00:00:15.632
+Useful, in yellow: forty-three.
 
-00:00:27.000 --> 00:00:32.856
-Option C. Two D hex: two times sixteen plus thirteen = forty-five — cut.
+00:00:15.632 --> 00:00:18.981
+In cyan: “decimal” to “hexadecimal”.
 
-00:00:32.856 --> 00:00:38.711
-Option D. Two F hex: two times sixteen plus fifteen = forty-seven — cut.
+00:00:18.981 --> 00:00:23.634
+Useless red herring: sensor reading — kick it out.
 
-00:00:38.711 --> 00:00:44.323
-Forty-three equals two times sixteen plus eleven — hexadecimal two B.
+00:00:23.634 --> 00:00:25.308
+Step three: draft.
 
-00:00:44.323 --> 00:00:47.088
-Therefore the correct answer is B.
+00:00:25.308 --> 00:00:30.333
+Forty-three divided by sixteen: two, remainder eleven.
+
+00:00:30.333 --> 00:00:32.194
+Eleven is written B.
+
+00:00:32.194 --> 00:00:33.682
+Together: two B.
+
+00:00:33.682 --> 00:00:35.264
+Step four: P O E.
+
+00:00:35.264 --> 00:00:38.707
+A, two five: only thirty-seven — cut.
+
+00:00:38.707 --> 00:00:41.219
+C, two D: forty-five — cut.
+
+00:00:41.219 --> 00:00:43.824
+D, two F: forty-seven — cut.
+
+00:00:43.824 --> 00:00:52.664
+Step five: sanity check and lock. Two times sixteen plus eleven equals forty-three. Checks out.
+
+00:00:52.664 --> 00:00:55.176
+So the correct answer is B.

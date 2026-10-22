@@ -1,20 +1,32 @@
 1
-00:00:00,000 --> 00:00:02,459
-Today is the mock paper walkthrough.
+00:00:00,000 --> 00:00:03,885
+This is the mock paper walkthrough — a Mock explanation.
 
 2
-00:00:02,459 --> 00:00:04,986
-Pei Jin Book A, Chapters One to Four.
+00:00:03,885 --> 00:00:06,452
+Pei Jin Book A, Chapters one to four.
 
 3
-00:00:04,986 --> 00:00:10,929
-Full paper: fifty marks. Section A multiple choice twenty; Section B structured thirty.
+00:00:06,452 --> 00:00:08,881
+This is a Mock, not a uniform test.
 
 4
-00:00:10,929 --> 00:00:15,233
-Remember: this is a Mock explanation — not a real uniform test.
+00:00:08,881 --> 00:00:14,084
+Fifty marks: Section A multiple choice twenty, Section B structured thirty.
 
 5
-00:00:15,233 --> 00:00:26,640
-This time we teach exam technique question by question: highlight keywords, sort useful versus useless info, eliminate options one by one, then reveal the letter last.
+00:00:14,084 --> 00:00:18,247
+Every multiple-choice question follows the five-step method.
+
+6
+00:00:18,247 --> 00:00:25,601
+Step one macro scan, step two denoise, step three draft, step four P O E, step five sanity check and lock.
+
+7
+00:00:25,601 --> 00:00:28,862
+The answer letter always waits until step five.
+
+8
+00:00:28,862 --> 00:00:32,400
+Hammy the hamster marks each step beside the paper.
 

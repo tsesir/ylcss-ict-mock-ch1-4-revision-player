@@ -1,36 +1,68 @@
 1
-00:00:00,000 --> 00:00:07,362
-Question two. Highlight: tablet “collects ballots” → server “tallies” → screen “displays” results.
+00:00:00,000 --> 00:00:01,188
+Question two.
 
 2
-00:00:07,362 --> 00:00:11,419
-Useful: the three-step order — input, process, output.
+00:00:01,188 --> 00:00:07,312
+Step one: macro scan. It asks which model the whole flow best fits.
 
 3
-00:00:11,419 --> 00:00:16,978
-Useless: which tablet or which class election — does not change the model.
+00:00:07,312 --> 00:00:10,694
+One mark. Command words: “best fits”.
 
 4
-00:00:16,978 --> 00:00:21,335
-Option A. Store–output–input: wrong order and names — cut.
+00:00:10,694 --> 00:00:12,339
+Step two: denoise.
 
 5
-00:00:21,335 --> 00:00:24,715
-Option B. Input–process–output, I P O — keep.
+00:00:12,339 --> 00:00:17,000
+Useful, in yellow: collect ballots, tally, display.
 
 6
-00:00:24,715 --> 00:00:30,199
-Option C. Compress–transmit–decompress: no compression in the stem — cut.
+00:00:17,000 --> 00:00:19,377
+In cyan: “the whole flow”.
 
 7
-00:00:30,199 --> 00:00:35,082
-Option D. Encrypt–backup–restore: none of that in the stem — cut.
+00:00:19,377 --> 00:00:24,769
+Useless red herring: class election, tablets — kick it out.
 
 8
-00:00:35,082 --> 00:00:39,590
-Ballot in, tally process, display out — best match is I P O.
+00:00:24,769 --> 00:00:26,415
+Step three: draft.
 
 9
-00:00:39,590 --> 00:00:42,144
-Therefore the correct answer is B.
+00:00:26,415 --> 00:00:28,517
+Collect ballots: input.
+
+10
+00:00:28,517 --> 00:00:29,888
+Tally: process.
+
+11
+00:00:29,888 --> 00:00:31,350
+Display: output.
+
+12
+00:00:31,350 --> 00:00:32,904
+Step four: P O E.
+
+13
+00:00:32,904 --> 00:00:37,748
+A, store, output, input: wrong order and names — cut.
+
+14
+00:00:37,748 --> 00:00:43,963
+C, compress, transmit, decompress: no compression in the stem — cut.
+
+15
+00:00:43,963 --> 00:00:49,630
+D, encrypt, back up, restore: no encryption in the stem — cut.
+
+16
+00:00:49,630 --> 00:00:59,044
+Step five: sanity check and lock. Input, process, output — three steps match three actions, same order.
+
+17
+00:00:59,044 --> 00:01:01,512
+So the correct answer is B.
 

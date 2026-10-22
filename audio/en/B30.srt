@@ -1,24 +1,32 @@
 1
-00:00:00,000 --> 00:00:01,835
-Part (c). Estimate file size.
+00:00:00,000 --> 00:00:01,418
+Part (c), three marks.
 
 2
-00:00:01,835 --> 00:00:11,012
-One thousand nine hundred twenty times one thousand eighty times twenty-four, divided by eight, then divided by one thousand twenty-four squared.
+00:00:01,418 --> 00:00:06,121
+Linking from (b): twenty-four bits is the colour depth from quantization.
 
 3
-00:00:11,012 --> 00:00:19,493
-First six million two hundred twenty thousand eight hundred, then divide by one million forty-eight thousand five hundred seventy-six.
+00:00:06,121 --> 00:00:16,044
+Working: one thousand nine hundred twenty times one thousand eighty times twenty-four, divided by eight, then divided by one thousand twenty-four squared.
 
 4
-00:00:19,493 --> 00:00:21,519
-About five point nine three M B.
+00:00:16,044 --> 00:00:20,619
+That gives six million two hundred twenty thousand eight hundred bytes.
 
 5
-00:00:21,519 --> 00:00:24,873
-Accept five point nine three to five point nine four.
+00:00:20,619 --> 00:00:25,000
+Divide by one million forty-eight thousand five hundred seventy-six.
 
 6
-00:00:24,873 --> 00:00:32,088
-Use one thousand twenty-four squared, not one thousand squared; do not forget divided by eight from bits to bytes.
+00:00:25,000 --> 00:00:28,544
+About five point nine three M B, to two decimal places.
+
+7
+00:00:28,544 --> 00:00:31,959
+Accept five point nine three to five point nine four.
+
+8
+00:00:31,959 --> 00:00:40,464
+Use one thousand twenty-four squared, not one thousand squared, which gives six point two two; and do not forget to divide by eight.
 

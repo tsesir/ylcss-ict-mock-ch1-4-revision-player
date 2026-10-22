@@ -1,28 +1,52 @@
 WEBVTT
 
-00:00:00.000 --> 00:00:08.328
-Question six. Highlight: height “must be between” forty and two hundred fifty centimetres — a range rule on input.
+00:00:00.000 --> 00:00:01.141
+Question six.
 
-00:00:08.328 --> 00:00:13.149
-Useful: the system checks whether input obeys a rule = validation.
+00:00:01.141 --> 00:00:06.583
+Step one: macro scan. It asks what a 40-to-250 height rule is.
 
-00:00:13.149 --> 00:00:18.116
-Useless: the clinic setting itself — does not change the check type.
+00:00:06.583 --> 00:00:10.445
+One mark. Command words: “this practice is”.
 
-00:00:18.116 --> 00:00:24.033
-Option A. Verification: usually double-entry compare; stem never says that — cut.
+00:00:10.445 --> 00:00:12.025
+Step two: denoise.
 
-00:00:24.033 --> 00:00:27.978
-Option B. Encryption: secrecy, not a range rule — cut.
+00:00:12.025 --> 00:00:17.818
+Useful, in yellow: height, forty to two hundred fifty centimetres.
 
-00:00:27.978 --> 00:00:32.288
-Option C. Backup: keeping copies, not input checking — cut.
+00:00:17.818 --> 00:00:21.329
+In cyan: “must be between” — the bounds.
 
-00:00:32.288 --> 00:00:34.333
-Option D. Validation — keep.
+00:00:21.329 --> 00:00:26.069
+Useless red herring: the clinic setting — kick it out.
 
-00:00:34.333 --> 00:00:37.620
-A range rule is validation, not verification.
+00:00:26.069 --> 00:00:27.649
+Step three: draft.
 
-00:00:37.620 --> 00:00:40.104
-Therefore the correct answer is D.
+00:00:27.649 --> 00:00:32.038
+There are bounds; the system checks automatically.
+
+00:00:32.038 --> 00:00:35.374
+Automatic rule checking is validation.
+
+00:00:35.374 --> 00:00:37.831
+Not double-entry comparison.
+
+00:00:37.831 --> 00:00:39.323
+Step four: P O E.
+
+00:00:39.323 --> 00:00:43.537
+A, verification: confused with validation — cut.
+
+00:00:43.537 --> 00:00:47.048
+B, encryption: secrecy, off-topic — cut.
+
+00:00:47.048 --> 00:00:50.120
+C, backup: copies, off-topic — cut.
+
+00:00:50.120 --> 00:00:57.054
+Step five: sanity check and lock. A range rule is validation, not verification.
+
+00:00:57.054 --> 00:00:59.424
+So the correct answer is D.

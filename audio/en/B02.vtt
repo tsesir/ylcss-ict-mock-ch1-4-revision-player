@@ -1,28 +1,52 @@
 WEBVTT
 
-00:00:00.000 --> 00:00:08.633
-Question one. Highlight keywords: weather-station “raw readings” written to a log, “not yet” turned into charts or alerts.
+00:00:00.000 --> 00:00:01.104
+Question one.
 
-00:00:08.633 --> 00:00:13.091
-Useful: raw, not yet interpreted — still data, not information.
+00:00:01.104 --> 00:00:07.050
+Step one: macro scan. It asks what these raw readings are best called.
 
-00:00:13.091 --> 00:00:20.025
-Useless for the label: which sensors (temperature, humidity, wind) — does not change the category.
+00:00:07.050 --> 00:00:10.363
+One mark. Command words: “best called”.
 
-00:00:20.025 --> 00:00:23.917
-Option A. Data: uninterpreted raw facts — keep for now.
+00:00:10.363 --> 00:00:11.892
+Step two: denoise.
 
-00:00:23.917 --> 00:00:27.738
-Option B. Information: processed and meaningful — cut.
+00:00:11.892 --> 00:00:14.610
+Useful, in yellow: raw readings.
 
-00:00:27.738 --> 00:00:31.064
-Option C. Knowledge: higher organisation — cut.
+00:00:14.610 --> 00:00:18.687
+In cyan: “not yet” turned into charts or alerts.
 
-00:00:31.064 --> 00:00:33.611
-Option D. Wisdom: even higher — cut.
+00:00:18.687 --> 00:00:24.887
+Useless red herring: rural site, every hour, which sensors — kick it out.
 
-00:00:33.611 --> 00:00:38.706
-The stem stresses “not yet interpreted”, so it is data, not information.
+00:00:24.887 --> 00:00:26.416
+Step three: draft.
 
-00:00:38.706 --> 00:00:41.112
-Therefore the correct answer is A.
+00:00:26.416 --> 00:00:29.049
+Raw and unprocessed means data.
+
+00:00:29.049 --> 00:00:32.702
+Processed and meaningful means information.
+
+00:00:32.702 --> 00:00:34.995
+“Not yet” keeps it at data.
+
+00:00:34.995 --> 00:00:36.439
+Step four: P O E.
+
+00:00:36.439 --> 00:00:41.875
+B, information: already processed, clashes with “not yet” — cut.
+
+00:00:41.875 --> 00:00:44.848
+C, knowledge: level too high — cut.
+
+00:00:44.848 --> 00:00:47.311
+D, wisdom: even higher — cut.
+
+00:00:47.311 --> 00:00:55.211
+Step five: sanity check and lock. What is left is uninterpreted raw fact, matching “not yet”.
+
+00:00:55.211 --> 00:00:57.504
+So the correct answer is A.

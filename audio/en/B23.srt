@@ -1,20 +1,28 @@
 1
-00:00:00,000 --> 00:00:07,231
-Part (b): name two input devices for checking product codes in the warehouse, each with one advantage.
+00:00:00,000 --> 00:00:04,853
+Part (b), four marks, four slots: two devices plus two advantages.
 
 2
-00:00:07,231 --> 00:00:11,910
-Example: barcode or Q R scanner — fast input, fewer keying errors.
+00:00:04,853 --> 00:00:08,897
+Same scenario: checking product codes in the warehouse.
 
 3
-00:00:11,910 --> 00:00:16,518
-Or: handheld data terminal — check beside the shelf in real time.
+00:00:08,897 --> 00:00:14,706
+Device one: barcode or Q R scanner; advantage: fast input, fewer keying errors.
 
 4
-00:00:16,518 --> 00:00:19,637
-Or: R F I D reader — read many tags at once.
+00:00:14,706 --> 00:00:19,339
+Device two: R F I D reader; advantage: reads many tags at once.
 
 5
-00:00:19,637 --> 00:00:24,600
-Remember: device plus advantage; do not treat output devices as input.
+00:00:19,339 --> 00:00:24,706
+A handheld data terminal also works: check beside the shelf in real time.
+
+6
+00:00:24,706 --> 00:00:28,162
+A device name without an advantage loses marks.
+
+7
+00:00:28,162 --> 00:00:32,280
+Do not give output devices such as printers or monitors.
 

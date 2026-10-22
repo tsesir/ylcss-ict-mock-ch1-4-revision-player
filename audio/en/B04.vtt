@@ -1,28 +1,52 @@
 WEBVTT
 
-00:00:00.000 --> 00:00:10.581
-Question three. Highlight: which item is NOT an information-system component; options include scanner, software, sales records, and a “layout plan”.
+00:00:00.000 --> 00:00:01.255
+Question three.
 
-00:00:10.581 --> 00:00:18.516
-Useful: typical components are hardware, software, data, procedures/people; the question asks for the outsider.
+00:00:01.255 --> 00:00:07.867
+Step one: macro scan. It asks which item is NOT part of the information system.
 
-00:00:18.516 --> 00:00:22.377
-Useless: festival stall mood — does not help the pick.
+00:00:07.867 --> 00:00:10.461
+One mark. Command words: “NOT”.
 
-00:00:22.377 --> 00:00:27.953
-Option A. Barcode scanner — hardware, a real component — cut (not the answer).
+00:00:10.461 --> 00:00:11.968
+Step two: denoise.
 
-00:00:27.953 --> 00:00:31.742
-Option B. POS software — software, a component — cut.
+00:00:11.968 --> 00:00:18.747
+Useful, in yellow: scanner, POS software, sales records, staff following a guide.
 
-00:00:31.742 --> 00:00:35.746
-Option C. Day’s sales records — data, a component — cut.
+00:00:18.747 --> 00:00:22.931
+In cyan: the negative word “not” — do not miss it.
 
-00:00:35.746 --> 00:00:40.893
-Option D. Stall layout plan — decoration only, not in processing — keep.
+00:00:22.931 --> 00:00:28.120
+Useless red herring: the school-fair stall mood — kick it out.
 
-00:00:40.893 --> 00:00:44.825
-Only the decorative layout plan is not an IS component.
+00:00:28.120 --> 00:00:29.627
+Step three: draft.
 
-00:00:44.825 --> 00:00:47.256
-Therefore the correct answer is D.
+00:00:29.627 --> 00:00:34.648
+Components: hardware, software, data, procedures and people.
+
+00:00:34.648 --> 00:00:37.410
+Match each option to a component.
+
+00:00:37.410 --> 00:00:41.176
+The one that matches nothing is the outsider.
+
+00:00:41.176 --> 00:00:42.599
+Step four: P O E.
+
+00:00:42.599 --> 00:00:46.616
+A, barcode scanner: hardware, a component — cut.
+
+00:00:46.616 --> 00:00:50.382
+B, POS software: software, a component — cut.
+
+00:00:50.382 --> 00:00:53.897
+C, sales records: data, a component — cut.
+
+00:00:53.897 --> 00:01:02.684
+Step five: sanity check and lock. The layout plan left is decoration only, no processing — it fits “not”.
+
+00:01:02.684 --> 00:01:04.944
+So the correct answer is D.

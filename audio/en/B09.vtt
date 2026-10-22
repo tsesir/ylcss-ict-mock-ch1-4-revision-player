@@ -1,28 +1,52 @@
 WEBVTT
 
-00:00:00.000 --> 00:00:10.111
-Question eight. Highlight: when replaying a chosen period, the system “can jump to” that time — no need to read frame by frame from the start.
+00:00:00.000 --> 00:00:01.200
+Question eight.
 
-00:00:10.111 --> 00:00:13.814
-Useful: jump straight to a location = direct access.
+00:00:01.200 --> 00:00:07.917
+Step one: macro scan. It asks the access method that jumps straight to a time point.
 
-00:00:13.814 --> 00:00:18.229
-Useless: traffic content itself — does not change access type.
+00:00:07.917 --> 00:00:10.956
+One mark. Command words: “closest to”.
 
-00:00:18.229 --> 00:00:23.854
-Option A. Sequential access: must read from the start — opposite of jump — cut.
+00:00:10.956 --> 00:00:12.395
+Step two: denoise.
 
-00:00:23.854 --> 00:00:27.984
-Option B. Tape-only serial: stem says disk can jump — cut.
+00:00:12.395 --> 00:00:16.794
+Useful, in yellow: chosen time slot, video frame, disk.
 
-00:00:27.984 --> 00:00:33.182
-Option C. Must download whole volume first: stem has no such limit — cut.
+00:00:16.794 --> 00:00:22.791
+In cyan: “can jump to” and “no need to read frame by frame from the start”.
 
-00:00:33.182 --> 00:00:35.389
-Option D. Direct access — keep.
+00:00:22.791 --> 00:00:27.189
+Useless red herring: the traffic content — kick it out.
 
-00:00:35.389 --> 00:00:38.451
-Jumping to a chosen frame is direct access.
+00:00:27.189 --> 00:00:28.629
+Step three: draft.
 
-00:00:38.451 --> 00:00:40.872
-Therefore the correct answer is D.
+00:00:28.629 --> 00:00:31.908
+Can jump means no reading from the start.
+
+00:00:31.908 --> 00:00:35.346
+No reading from the start is direct access.
+
+00:00:35.346 --> 00:00:37.585
+Disks support direct access.
+
+00:00:37.585 --> 00:00:38.945
+Step four: P O E.
+
+00:00:38.945 --> 00:00:44.383
+A, sequential access: must read from the start — the opposite — cut.
+
+00:00:44.383 --> 00:00:48.461
+B, tape-only serial read: the stem says disk — cut.
+
+00:00:48.461 --> 00:00:53.419
+C, download whole file first: no such limit in the stem — cut.
+
+00:00:53.419 --> 00:00:59.977
+Step five: sanity check and lock. Jumping to a chosen frame matches direct access.
+
+00:00:59.977 --> 00:01:02.136
+So the correct answer is D.
