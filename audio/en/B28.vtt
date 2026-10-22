@@ -1,0 +1,19 @@
+WEBVTT
+
+00:00:00.000 --> 00:00:04.356
+Section B question three (a). Compare how they are built.
+
+00:00:04.356 --> 00:00:06.572
+Bitmap: made of a pixel grid.
+
+00:00:06.572 --> 00:00:11.463
+Vector: defined by mathematical objects — lines, curves, shapes.
+
+00:00:11.463 --> 00:00:16.889
+Good vector examples: company logo, fonts, line art, or C A D drawings.
+
+00:00:16.889 --> 00:00:22.163
+Reason: objects scale and edit independently; suit many output sizes.
+
+00:00:22.163 --> 00:00:28.200
+This item does not test enlarge jaggedness — do not only talk about distortion.

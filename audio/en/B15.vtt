@@ -1,13 +1,28 @@
 WEBVTT
 
-00:00:00.000 --> 00:00:02.428
-That ends today’s Mock walkthrough.
+00:00:00.000 --> 00:00:07.707
+Question fourteen. Highlight: the string Hello; “standard A S C I I”; “one byte per character”.
 
-00:00:02.428 --> 00:00:12.487
-Recheck the twenty multiple-choice answers; in Section B, replay the hard parts — two's complement decode, odd parity, and the file-size formula.
+00:00:07.707 --> 00:00:11.926
+Useful: five characters times one byte = five bytes.
 
-00:00:12.487 --> 00:00:14.915
-Replay any tough segment as needed.
+00:00:11.926 --> 00:00:16.145
+Useless: what Hello means — does not change storage.
 
-00:00:14.915 --> 00:00:15.192
-End.
+00:00:16.145 --> 00:00:18.417
+Option A. Five bytes — keep.
+
+00:00:18.417 --> 00:00:23.203
+Option B. Six bytes: often wrongly adds a terminator — cut.
+
+00:00:23.203 --> 00:00:27.828
+Option C. Ten bytes: maybe counting two bytes each — cut.
+
+00:00:27.828 --> 00:00:32.696
+Option D. Forty bytes: maybe counting bits without ÷8 — cut.
+
+00:00:32.696 --> 00:00:36.266
+Five characters, one byte each — five bytes.
+
+00:00:36.266 --> 00:00:39.024
+Therefore the correct answer is A.

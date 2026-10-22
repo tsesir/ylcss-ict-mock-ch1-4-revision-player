@@ -1,28 +1,36 @@
 1
-00:00:00,000 --> 00:00:04,629
-Section B question one — online shop orders and warehouse dispatch.
+00:00:00,000 --> 00:00:09,077
+Question five. Highlight: an online article claims “all social posts are untrustworthy”; ask what information literacy looks like.
 
 2
-00:00:04,629 --> 00:00:06,702
-Part (a): classify four items.
+00:00:09,077 --> 00:00:14,454
+Useful: literacy = verify, then judge — neither blind trust nor blind reject.
 
 3
-00:00:06,702 --> 00:00:10,916
-Thermal shipping-label printer — hardware; a physical device.
+00:00:14,454 --> 00:00:19,761
+Useless: how sensational the headline is — does not decide the right action.
 
 4
-00:00:10,916 --> 00:00:15,269
-Stock-management application — software; an executable program.
+00:00:19,761 --> 00:00:23,810
+Option A. Forward at once — spreading without check — cut.
 
 5
-00:00:15,269 --> 00:00:19,207
-Customer order records — data; facts that must be stored.
+00:00:23,810 --> 00:00:28,489
+Option B. Delete because the title is loud, and never verify — cut.
 
 6
-00:00:19,207 --> 00:00:24,458
-Standard operating guide for checking goods — procedure; steps staff follow.
+00:00:28,489 --> 00:00:33,865
+Option C. Check author, date, citations and other reports, then judge — keep.
 
 7
-00:00:24,458 --> 00:00:27,912
-Any three correct classifications earn full marks.
+00:00:33,865 --> 00:00:37,077
+Option D. Conclude from the title alone — cut.
+
+8
+00:00:37,077 --> 00:00:40,778
+Literacy centres on verifying sources before judging.
+
+9
+00:00:40,778 --> 00:00:43,152
+Therefore the correct answer is C.
 

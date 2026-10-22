@@ -1,0 +1,28 @@
+WEBVTT
+
+00:00:00.000 --> 00:00:08.574
+Question fifteen. Highlight: data bits one zero one one zero one one; “even parity”; what should the parity bit be?
+
+00:00:08.574 --> 00:00:15.880
+Useful: count the ones — five, odd; even parity needs an even total, so set the parity bit to one.
+
+00:00:15.880 --> 00:00:20.502
+Useless: transmission medium — does not change the count rule.
+
+00:00:20.502 --> 00:00:24.304
+Option A. Set zero: five plus zero stays odd — cut.
+
+00:00:24.304 --> 00:00:28.181
+Option B. Set one: five plus one = six, even — keep.
+
+00:00:28.181 --> 00:00:31.908
+Option C. Cannot compute: bits are complete — cut.
+
+00:00:31.908 --> 00:00:36.083
+Option D. Depends on medium: parity rule does not — cut.
+
+00:00:36.083 --> 00:00:40.929
+Five ones is odd; even parity needs a one to make the total even.
+
+00:00:40.929 --> 00:00:43.464
+Therefore the correct answer is B.

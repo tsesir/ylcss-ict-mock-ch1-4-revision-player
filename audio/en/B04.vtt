@@ -1,19 +1,28 @@
 WEBVTT
 
-00:00:00.000 --> 00:00:07.104
-Question eleven: answer B. Decimal forty-three equals two times sixteen plus eleven — hexadecimal two B.
+00:00:00.000 --> 00:00:10.581
+Question three. Highlight: which item is NOT an information-system component; options include scanner, software, sales records, and a “layout plan”.
 
-00:00:07.104 --> 00:00:15.985
-Question twelve: answer C. In binary one zero one one zero one, the third one-bit from the right has place value two to the three.
+00:00:10.581 --> 00:00:18.516
+Useful: typical components are hardware, software, data, procedures/people; the question asks for the outsider.
 
-00:00:15.985 --> 00:00:23.840
-Question thirteen: answer C. Minus fifty-three in eight-bit two's complement is one one zero zero one zero one one.
+00:00:18.516 --> 00:00:22.377
+Useless: festival stall mood — does not help the pick.
 
-00:00:23.840 --> 00:00:29.715
-Steps: write fifty-three as zero zero one one zero one zero one; invert, then add one.
+00:00:22.377 --> 00:00:27.953
+Option A. Barcode scanner — hardware, a real component — cut (not the answer).
 
-00:00:29.715 --> 00:00:35.248
-Question fourteen: answer A. Hello — five characters, one byte each — five bytes.
+00:00:27.953 --> 00:00:31.742
+Option B. POS software — software, a component — cut.
 
-00:00:35.248 --> 00:00:43.992
-Question fifteen: answer B. Even parity: five ones in the data bits — odd — so set the parity bit to one to make the total even.
+00:00:31.742 --> 00:00:35.746
+Option C. Day’s sales records — data, a component — cut.
+
+00:00:35.746 --> 00:00:40.893
+Option D. Stall layout plan — decoration only, not in processing — keep.
+
+00:00:40.893 --> 00:00:44.825
+Only the decorative layout plan is not an IS component.
+
+00:00:44.825 --> 00:00:47.256
+Therefore the correct answer is D.

@@ -1,16 +1,36 @@
 1
-00:00:00,000 --> 00:00:04,229
-Section B question three part (b). Two steps in image digitising.
+00:00:00,000 --> 00:00:11,263
+Question twelve. Highlight: binary one zero one one zero one; counting “from the right”, the “third bit whose face value is one” — what is its place value?
 
 2
-00:00:04,229 --> 00:00:11,645
-Sampling: measure or capture image samples at set spacing in space or time; linked to resolution or sampling rate.
+00:00:11,263 --> 00:00:22,381
+Useful: from the right, one-bits sit at two to the zero, two to the two, two to the three… the third is two to the three. Say place value — not “weight”.
 
 3
-00:00:11,645 --> 00:00:20,622
-Quantization: map each sample’s continuous brightness or colour onto a finite set of discrete levels; linked to colour depth or bit depth.
+00:00:22,381 --> 00:00:27,613
+Useless: the whole binary total — the question does not ask for the sum.
 
 4
-00:00:20,622 --> 00:00:22,704
-Do not swap the two definitions.
+00:00:27,613 --> 00:00:31,609
+Option A. Two to the one — not the third one-bit — cut.
+
+5
+00:00:31,609 --> 00:00:35,969
+Option B. Two to the two — that is the second one-bit — cut.
+
+6
+00:00:35,969 --> 00:00:38,440
+Option C. Two to the three — keep.
+
+7
+00:00:38,440 --> 00:00:42,582
+Option D. Two to the four — one place further left — cut.
+
+8
+00:00:42,582 --> 00:00:47,377
+The third one-bit from the right has place value two to the three.
+
+9
+00:00:47,377 --> 00:00:49,848
+Therefore the correct answer is C.
 

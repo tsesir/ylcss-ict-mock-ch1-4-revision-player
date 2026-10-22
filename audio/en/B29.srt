@@ -1,0 +1,16 @@
+1
+00:00:00,000 --> 00:00:02,808
+Part (b). Two steps in image digitisation.
+
+2
+00:00:02,808 --> 00:00:10,028
+Sampling: measure or take image samples at intervals in space or time; links to resolution or sampling rate.
+
+3
+00:00:10,028 --> 00:00:19,053
+Quantization: map each sample’s continuous brightness or colour to a finite set of discrete levels; links to colour depth or bit depth.
+
+4
+00:00:19,053 --> 00:00:21,192
+Do not swap the two definitions.
+

@@ -1,0 +1,22 @@
+WEBVTT
+
+00:00:00.000 --> 00:00:06.726
+Section B question two (a). Eight-bit two's complement reading: one zero one one zero zero one zero.
+
+00:00:06.726 --> 00:00:11.502
+Step one: most significant bit M S B is one, so the number is negative.
+
+00:00:11.502 --> 00:00:15.806
+Step two: invert all bits → zero one zero zero one one zero one.
+
+00:00:15.806 --> 00:00:19.707
+Step three: add one → zero one zero zero one one one zero.
+
+00:00:19.707 --> 00:00:24.819
+Place values: sixty-four plus eight plus four plus two equals seventy-eight.
+
+00:00:24.819 --> 00:00:27.779
+So the decimal value is minus seventy-eight.
+
+00:00:27.779 --> 00:00:37.128
+Do not drop the sign and write plus seventy-eight; do not invert without adding one; do not treat it as unsigned one hundred seventy-eight.

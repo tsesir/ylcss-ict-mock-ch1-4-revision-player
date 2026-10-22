@@ -1,20 +1,36 @@
 1
-00:00:00,000 --> 00:00:08,789
-Section B question one part (b): name two input devices for checking product codes in the warehouse, each with one advantage.
+00:00:00,000 --> 00:00:08,328
+Question six. Highlight: height “must be between” forty and two hundred fifty centimetres — a range rule on input.
 
 2
-00:00:08,789 --> 00:00:13,430
-Example: barcode or Q R scanner — fast input, fewer typing errors.
+00:00:08,328 --> 00:00:13,149
+Useful: the system checks whether input obeys a rule = validation.
 
 3
-00:00:13,430 --> 00:00:18,000
-Or: handheld data terminal — check beside the shelf in real time.
+00:00:13,149 --> 00:00:18,116
+Useless: the clinic setting itself — does not change the check type.
 
 4
-00:00:18,000 --> 00:00:21,094
-Or: R F I D reader — read many tags at once.
+00:00:18,116 --> 00:00:24,033
+Option A. Verification: usually double-entry compare; stem never says that — cut.
 
 5
-00:00:21,094 --> 00:00:26,016
-Remember: device plus advantage; do not treat output devices as input.
+00:00:24,033 --> 00:00:27,978
+Option B. Encryption: secrecy, not a range rule — cut.
+
+6
+00:00:27,978 --> 00:00:32,288
+Option C. Backup: keeping copies, not input checking — cut.
+
+7
+00:00:32,288 --> 00:00:34,333
+Option D. Validation — keep.
+
+8
+00:00:34,333 --> 00:00:37,620
+A range rule is validation, not verification.
+
+9
+00:00:37,620 --> 00:00:40,104
+Therefore the correct answer is D.
 

@@ -1,19 +1,28 @@
 WEBVTT
 
-00:00:00.000 --> 00:00:04.628
-Section B question three part (a). Compare how they are built.
+00:00:00.000 --> 00:00:06.099
+Question eleven. Highlight: convert decimal “forty-three” to “hexadecimal”.
 
-00:00:04.628 --> 00:00:08.062
-Bitmap: a grid of pixels, or a raster of dots.
+00:00:06.099 --> 00:00:10.735
+Useful: divide by sixteen; remainder eleven is written B.
 
-00:00:08.062 --> 00:00:13.511
-Vector graphics: defined by mathematical objects — lines, curves, shapes.
+00:00:10.735 --> 00:00:15.208
+Useless: sensor story — does not change the conversion.
 
-00:00:13.511 --> 00:00:19.035
-A good vector example: company logo, typeface, line art, or C A D drawing.
+00:00:15.208 --> 00:00:21.145
+Option A. Two five hex: two times sixteen plus five = thirty-seven — cut.
 
-00:00:19.035 --> 00:00:24.186
-Reason: objects scale and edit independently; suit many output sizes.
+00:00:21.145 --> 00:00:27.000
+Option B. Two B hex: two times sixteen plus eleven = forty-three — keep.
 
-00:00:24.186 --> 00:00:29.784
-This part does not test enlarge-and-jag; do not only talk about distortion.
+00:00:27.000 --> 00:00:32.856
+Option C. Two D hex: two times sixteen plus thirteen = forty-five — cut.
+
+00:00:32.856 --> 00:00:38.711
+Option D. Two F hex: two times sixteen plus fifteen = forty-seven — cut.
+
+00:00:38.711 --> 00:00:44.323
+Forty-three equals two times sixteen plus eleven — hexadecimal two B.
+
+00:00:44.323 --> 00:00:47.088
+Therefore the correct answer is B.

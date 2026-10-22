@@ -1,20 +1,36 @@
 1
-00:00:00,000 --> 00:00:02,051
-Section B question one part (c).
+00:00:00,000 --> 00:00:09,647
+Question seven. Highlight: each sold ticket gets a “venue-unique” number used to “identify” that ticket and link showtime and seat.
 
 2
-00:00:02,051 --> 00:00:08,334
-Product codes must be two uppercase letters plus four digits — for example A B one two three four.
+00:00:09,647 --> 00:00:13,476
+Useful: uniquely identifying a record = primary key.
 
 3
-00:00:08,334 --> 00:00:11,475
-This validation is a format check, or type check.
+00:00:13,476 --> 00:00:17,379
+Useless: cinema theme — does not change the key role.
 
 4
-00:00:11,475 --> 00:00:18,784
-Purpose: keep codes in the planned pattern; cut invalid codes entering the system; raise accuracy and consistency.
+00:00:17,379 --> 00:00:21,577
+Option A. Remark-field text: not guaranteed unique — cut.
 
 5
-00:00:18,784 --> 00:00:23,784
-Do not write verification or range check — the focus is the character pattern.
+00:00:21,577 --> 00:00:26,069
+Option B. Parity bit: error check, not ticket identity — cut.
+
+6
+00:00:26,069 --> 00:00:28,205
+Option C. Primary key — keep.
+
+7
+00:00:28,205 --> 00:00:33,065
+Option D. File-compression parameter: unrelated to identity — cut.
+
+8
+00:00:33,065 --> 00:00:37,336
+Venue-unique and used to identify — best as a primary key.
+
+9
+00:00:37,336 --> 00:00:39,840
+Therefore the correct answer is C.
 

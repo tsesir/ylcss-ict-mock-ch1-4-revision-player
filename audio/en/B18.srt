@@ -1,0 +1,36 @@
+1
+00:00:00,000 --> 00:00:06,821
+Question seventeen. Highlight: “sixteen-bit” colour depth; how many colours can be represented?
+
+2
+00:00:06,821 --> 00:00:11,632
+Useful: count = two to the power of bit depth = two to the sixteen.
+
+3
+00:00:11,632 --> 00:00:15,222
+Useless: camera brand — does not change the maths.
+
+4
+00:00:15,222 --> 00:00:19,387
+Option A. Sixteen: mistaking depth for colour count — cut.
+
+5
+00:00:19,387 --> 00:00:25,275
+Option B. Sixty-five thousand five hundred thirty-six = two to the sixteen — keep.
+
+6
+00:00:25,275 --> 00:00:31,235
+Option C. Thirty-two thousand seven hundred sixty-eight = two to the fifteen — cut.
+
+7
+00:00:31,235 --> 00:00:35,327
+Option D. Two hundred fifty-six = two to the eight — cut.
+
+8
+00:00:35,327 --> 00:00:41,431
+Sixteen-bit depth → two to the sixteen = sixty-five thousand five hundred thirty-six.
+
+9
+00:00:41,431 --> 00:00:43,872
+Therefore the correct answer is B.
+

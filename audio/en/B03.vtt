@@ -1,16 +1,28 @@
 WEBVTT
 
-00:00:00.000 --> 00:00:07.345
-Question six: answer D. Height must be between forty and two hundred fifty centimetres — that is validation.
+00:00:00.000 --> 00:00:07.362
+Question two. Highlight: tablet “collects ballots” → server “tallies” → screen “displays” results.
 
-00:00:07.345 --> 00:00:12.786
-Question seven: answer C. A venue-unique ticket number is best as a primary key.
+00:00:07.362 --> 00:00:11.419
+Useful: the three-step order — input, process, output.
 
-00:00:12.786 --> 00:00:17.818
-Question eight: answer D. Jumping to a chosen time frame is direct access.
+00:00:11.419 --> 00:00:16.978
+Useless: which tablet or which class election — does not change the model.
 
-00:00:17.818 --> 00:00:23.939
-Question nine: answer B. Data control aims for accuracy, completeness, and authorised use.
+00:00:16.978 --> 00:00:21.335
+Option A. Store–output–input: wrong order and names — cut.
 
-00:00:23.939 --> 00:00:29.040
-Question ten: answer A. Required fields must not be blank — presence check.
+00:00:21.335 --> 00:00:24.715
+Option B. Input–process–output, I P O — keep.
+
+00:00:24.715 --> 00:00:30.199
+Option C. Compress–transmit–decompress: no compression in the stem — cut.
+
+00:00:30.199 --> 00:00:35.082
+Option D. Encrypt–backup–restore: none of that in the stem — cut.
+
+00:00:35.082 --> 00:00:39.590
+Ballot in, tally process, display out — best match is I P O.
+
+00:00:39.590 --> 00:00:42.144
+Therefore the correct answer is B.

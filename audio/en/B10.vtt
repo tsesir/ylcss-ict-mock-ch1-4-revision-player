@@ -1,19 +1,28 @@
 WEBVTT
 
-00:00:00.000 --> 00:00:02.224
-Section B question two part (b).
+00:00:00.000 --> 00:00:06.988
+Question nine. Highlight: a gear-loan system “applies data control” — what is the main purpose?
 
-00:00:02.224 --> 00:00:06.951
-In two's complement, the most significant bit M S B is the sign bit.
+00:00:06.988 --> 00:00:11.916
+Useful: data-control aims — accuracy, completeness, authorised use.
 
-00:00:06.951 --> 00:00:09.176
-M S B equals one means negative.
+00:00:11.916 --> 00:00:16.403
+Useless: sports-room setting — does not redefine the purpose.
 
-00:00:09.176 --> 00:00:13.068
-M S B equals zero means non-negative — positive or zero.
+00:00:16.403 --> 00:00:21.478
+Option A. Add UI steps on purpose to deter loans — not the aim — cut.
 
-00:00:13.068 --> 00:00:17.656
-The sign bit takes part in the numeric value and decides the sign.
+00:00:21.478 --> 00:00:26.480
+Option B. Ensure data are accurate, complete, and authorised — keep.
 
-00:00:17.656 --> 00:00:24.816
-Do not only say “it is important” without explaining plus or minus; do not call the M S B a parity bit.
+00:00:26.480 --> 00:00:32.143
+Option C. Raise screen resolution — display hardware, not data control — cut.
+
+00:00:32.143 --> 00:00:36.998
+Option D. Raise C P U clock — performance, not data control — cut.
+
+00:00:36.998 --> 00:00:44.059
+Data control is about accuracy, completeness, and authority — not deterrence or hardware tweaks.
+
+00:00:44.059 --> 00:00:46.560
+Therefore the correct answer is B.

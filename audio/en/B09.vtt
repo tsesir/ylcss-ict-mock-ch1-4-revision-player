@@ -1,22 +1,28 @@
 WEBVTT
 
-00:00:00.000 --> 00:00:07.332
-Section B question two part (a). Eight-bit two's complement reading: one zero one one zero zero one zero.
+00:00:00.000 --> 00:00:10.111
+Question eight. Highlight: when replaying a chosen period, the system “can jump to” that time — no need to read frame by frame from the start.
 
-00:00:07.332 --> 00:00:12.360
-Step one: most significant bit M S B is one — so the number is negative.
+00:00:10.111 --> 00:00:13.814
+Useful: jump straight to a location = direct access.
 
-00:00:12.360 --> 00:00:16.829
-Step two: invert all bits — zero one zero zero one one zero one.
+00:00:13.814 --> 00:00:18.229
+Useless: traffic content itself — does not change access type.
 
-00:00:16.829 --> 00:00:20.879
-Step three: add one — zero one zero zero one one one zero.
+00:00:18.229 --> 00:00:23.854
+Option A. Sequential access: must read from the start — opposite of jump — cut.
 
-00:00:20.879 --> 00:00:26.187
-Place values: sixty-four plus eight plus four plus two equals seventy-eight.
+00:00:23.854 --> 00:00:27.984
+Option B. Tape-only serial: stem says disk can jump — cut.
 
-00:00:26.187 --> 00:00:29.259
-So the decimal value is minus seventy-eight.
+00:00:27.984 --> 00:00:33.182
+Option C. Must download whole volume first: stem has no such limit — cut.
 
-00:00:29.259 --> 00:00:35.544
-Do not ignore the sign bit and write plus seventy-eight; do not invert without adding one.
+00:00:33.182 --> 00:00:35.389
+Option D. Direct access — keep.
+
+00:00:35.389 --> 00:00:38.451
+Jumping to a chosen frame is direct access.
+
+00:00:38.451 --> 00:00:40.872
+Therefore the correct answer is D.

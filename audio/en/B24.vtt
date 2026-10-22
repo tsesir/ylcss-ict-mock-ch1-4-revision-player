@@ -1,0 +1,16 @@
+WEBVTT
+
+00:00:00.000 --> 00:00:00.595
+Part (c).
+
+00:00:00.595 --> 00:00:07.075
+Product codes must be two uppercase letters plus four digits — for example A B one two three four.
+
+00:00:07.075 --> 00:00:10.315
+That validation is a format check, or type check.
+
+00:00:10.315 --> 00:00:17.456
+Purpose: ensure codes match the planned pattern, keep invalid codes out, and raise accuracy and consistency.
+
+00:00:17.456 --> 00:00:22.680
+Do not write verification or range check; this item is about character pattern.

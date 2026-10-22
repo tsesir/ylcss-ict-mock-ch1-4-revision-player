@@ -1,6 +1,6 @@
 /* Per-beat stages for 模擬測驗講解／Mock 講解 · Book A Ch1–4.
-   One builder and one tween set per beat. Black/white projection stage.
-   Pure playback: worked steps and lecture cards, no quiz controls. */
+   31 beats: intro, MC1–MC20, Section B parts, outro.
+   Pure playback lecture cards. No quiz controls. */
 function dom(html) {
   var tpl = document.createElement("template");
   tpl.innerHTML = html.trim();
@@ -28,432 +28,346 @@ function all(root, sel) {
 }
 
 function enter(tl, target, at, fromVars, toVars) {
-  tl.fromTo(
-    target,
-    Object.assign({ autoAlpha: 0, immediateRender: true }, fromVars || {}),
-    Object.assign({ autoAlpha: 1, duration: 0.38, ease: "back.out(1.6)" }, toVars || {}),
-    at
-  );
+  var to = Object.assign({ autoAlpha: 1, duration: 0.38, ease: "power2.out" }, toVars || {});
+  delete to.y;
+  delete to.x;
+  delete to.scale;
+  tl.fromTo(target, { autoAlpha: 0, immediateRender: true }, to, at);
 }
 
-function pulse(tl, el, at) {
-  tl.to(el, {
-    scale: 1.06,
-    duration: 0.22,
-    yoyo: true,
-    repeat: 1,
-    ease: "power1.inOut",
-    transformOrigin: "center center"
-  }, at);
+function beatDur(root) {
+  var n = Number(root.dataset.duration);
+  return n > 0 ? n : 40;
 }
 
-function ink(tl, nodes, at, step) {
-  tl.to(nodes, {
-    backgroundColor: "#000",
-    color: "#fff",
-    borderColor: "#000",
-    duration: 0.22,
-    stagger: step || 0.2,
-    ease: "power2.out"
-  }, at);
+function revealAt(root, start, lead) {
+  return start + Math.max(lead, beatDur(root) - 6);
 }
 
-function caption(text) {
-  return '<p class="caption anchor">' + esc(text) + "</p>";
-}
+var MC = {
+  B02: { n: "1", title: "數據 vs 資訊", focus: "原始讀數，尚未製成圖表或警報", answer: "A", why: "尚未詮釋 → 數據", opts: [["A", "數據 · 未詮釋"], ["B", "資訊 · 已處理"], ["C", "知識"], ["D", "智慧"]] },
+  B03: { n: "2", title: "IPO 模型", focus: "收集選票 → 統計 → 顯示結果", answer: "B", why: "輸入、處理、輸出", opts: [["A", "儲存—輸出—輸入"], ["B", "輸入—處理—輸出"], ["C", "壓縮—傳輸—解壓"], ["D", "加密—備份—還原"]] },
+  B04: { n: "3", title: "不是系統組件", focus: "邊一項不是資訊系統組成部分", answer: "D", why: "平面圖只是裝飾", opts: [["A", "掃描器 · 硬件"], ["B", "收銀軟件"], ["C", "銷售紀錄 · 數據"], ["D", "佈置平面圖"]] },
+  B05: { n: "4", title: "感測器是輸入", focus: "雨量感測器量度降雨並送入系統", answer: "A", why: "量度後送入 → 輸入", opts: [["A", "輸入裝置"], ["B", "輸出裝置"], ["C", "顯示裝置"], ["D", "列印裝置"]] },
+  B06: { n: "5", title: "資訊素養", focus: "網上文章聲稱一律不可信", answer: "C", why: "查證來源再判斷", opts: [["A", "立刻轉發"], ["B", "刪除、不再查證"], ["C", "查核來源再判斷"], ["D", "只看標題"]] },
+  B07: { n: "6", title: "有效性檢驗", focus: "身高必須介乎 40–250 cm", answer: "D", why: "範圍規則 → 有效性檢驗", opts: [["A", "核實"], ["B", "加密"], ["C", "備份"], ["D", "有效性檢驗"]] },
+  B08: { n: "7", title: "主關鍵字", focus: "全場唯一票號，用以識別", answer: "C", why: "唯一識別 → 主關鍵字", opts: [["A", "備註欄"], ["B", "校驗位元"], ["C", "主關鍵字"], ["D", "壓縮參數"]] },
+  B09: { n: "8", title: "直接存取", focus: "可跳至指定時點，不必由頭讀", answer: "D", why: "可定位 → 直接存取", opts: [["A", "順序存取"], ["B", "只適用磁帶"], ["C", "整卷下載"], ["D", "直接存取"]] },
+  B10: { n: "9", title: "數據控制", focus: "借用系統施行數據控制的目的", answer: "B", why: "準確、完整、獲授權", opts: [["A", "增加步驟阻嚇"], ["B", "準確、完整、授權"], ["C", "提高解像度"], ["D", "加快處理器時脈"]] },
+  B11: { n: "10", title: "存在檢查", focus: "必填欄不得留空", answer: "A", why: "有沒有填 → 存在檢查", opts: [["A", "存在檢查"], ["B", "範圍檢查"], ["C", "類型檢查"], ["D", "檢查位數"]] },
+  B12: { n: "11", title: "43 轉十六進制", focus: "43 ÷ 16 = 2 餘 11", answer: "B", why: "餘數 11 寫成 B", opts: [["A", "25₁₆"], ["B", "2B₁₆"], ["C", "2D₁₆"], ["D", "2F₁₆"]] },
+  B13: { n: "12", title: "位值 2³", focus: "101101₂，由右數第三個 1", answer: "C", why: "第三個 1 的位值是 2³", opts: [["A", "2¹"], ["B", "2²"], ["C", "2³"], ["D", "2⁴"]] },
+  B14: { n: "13", title: "−53 二進制補碼", focus: "八位元二進制補碼表示 −53", answer: "C", why: "取反加一 → 11001011", opts: [["A", "00110101"], ["B", "10110100"], ["C", "11001011"], ["D", "01001011"]] },
+  B15: { n: "14", title: "ASCII 五位元組", focus: "Hello · 每字元一位元組", answer: "A", why: "5 字元 × 1 位元組", opts: [["A", "5 位元組"], ["B", "6 位元組"], ["C", "10 位元組"], ["D", "40 位元組"]] },
+  B16: { n: "15", title: "偶校驗位 = 1", focus: "1011011 · 五個 1 · 偶校驗", answer: "B", why: "奇數個 1，校驗位設 1", opts: [["A", "設 0"], ["B", "設 1"], ["C", "無法計算"], ["D", "取決於介質"]] },
+  B17: { n: "16", title: "點陣放大", focus: "點陣圖放大數倍作大型輸出", answer: "A", why: "像素放大 → 鋸齒失真", opts: [["A", "鋸齒失真"], ["B", "檔案必然變小"], ["C", "色彩自動更鮮豔"], ["D", "仍完全銳利"]] },
+  B18: { n: "17", title: "2¹⁶ = 65536", focus: "十六位元色彩深度的顏色種數", answer: "B", why: "2¹⁶ = 65536", opts: [["A", "16"], ["B", "65536"], ["C", "32768"], ["D", "256"]] },
+  B19: { n: "18", title: "像素解像度", focus: "手機與大電視都仍然清楚", answer: "D", why: "較高像素解像度保留細節", opts: [["A", "較低位元率"], ["B", "較少音軌"], ["C", "較小檔案"], ["D", "較高像素解像度"]] },
+  B20: { n: "19", title: "96 KB 單色", focus: "1024×768 · 1 bit · 未壓縮", answer: "D", why: "÷8 ÷1024 = 96 KB", opts: [["A", "768 KB"], ["B", "1024 KB"], ["C", "192 KB"], ["D", "96 KB"]] },
+  B21: { n: "20", title: "GIF 透明與動畫", focus: "背景透明，同時要簡單幀動畫", answer: "C", why: "GIF 可透明加簡單動畫", opts: [["A", "JPEG"], ["B", "BMP"], ["C", "GIF"], ["D", "TIFF"]] }
+};
 
-function stampOf(beat) {
-  return '<div class="stamp-wrap"><div class="stamp">' + esc(beat.stamp) + "</div></div>";
-}
-
-function explainGrid(items, cols) {
-  return '<div class="explain-grid cols-' + cols + '">' + items.map(function (item) {
-    var extra = item.extra ? '<p class="explain-extra">' + esc(item.extra) + "</p>" : "";
-    var mark = item.mark ? '<span class="choice">' + esc(item.mark) + "</span>" : "";
-    return '<article class="explain-card">' + mark +
-      '<p class="explain-kicker">' + esc(item.kicker) + "</p>" +
-      "<h3>" + esc(item.title) + "</h3>" +
-      "<p>" + esc(item.body) + "</p>" + extra + "</article>";
-  }).join("") + "</div>";
-}
-
-function bitRow(pattern, extra) {
-  return '<div class="bit-row' + (extra ? " " + extra : "") + '">' + String(pattern).split("").map(function (ch) {
-    if (ch === " ") return '<span class="bit gap"></span>';
-    var on = ch === "1" ? " on" : "";
-    return '<span class="bit' + on + '">' + esc(ch) + "</span>";
-  }).join("") + "</div>";
-}
-
-function buildB01(beat) {
+function buildB01() {
   return dom(
-    '<div data-layout="title-scores">' +
-      '<div class="hero sticker anchor">' +
-        '<div><p class="eyebrow">' + esc(beat.eyebrow) + "</p><h2>" +
-          esc(beat.headline[0]) + "<br>" + esc(beat.headline[1]) +
-        "</h2></div>" +
-        '<div class="chapter-badge inkbox">' + esc(beat.stamp) + "</div>" +
-      "</div>" +
+    '<div data-layout="intro">' +
+      '<p class="mc-kicker">YLCSS · S4 ICT · 純播放</p>' +
+      "<h2>模擬測驗講解<br>Book A · Ch1–4</h2>" +
       '<div class="score-row">' +
-        '<article class="score-card"><b>50</b><span>全卷</span></article>' +
-        '<article class="score-card"><b>20</b><span>甲部</span></article>' +
-        '<article class="score-card"><b>30</b><span>乙部</span></article>' +
+        '<article class="inkbox"><b>50</b><span>全卷</span></article>' +
+        '<article class="inkbox"><b>20</b><span>甲部</span></article>' +
+        '<article class="inkbox"><b>30</b><span>乙部</span></article>' +
       "</div>" +
-      '<p class="lede">培進 Book A · 第一章至第四章 · 純播放講解</p>' +
+      '<div class="tech-row">' +
+        "<article class=\"inkbox\"><h3>1 標重點</h3></article>" +
+        "<article class=\"inkbox\"><h3>2 分有用</h3></article>" +
+        "<article class=\"inkbox\"><h3>3 逐個剔</h3></article>" +
+        "<article class=\"inkbox\"><h3>4 最後揭示</h3></article>" +
+      "</div>" +
     "</div>"
   );
 }
+
 function tweensB01(tl, root, start) {
-  enter(tl, all(root, ".score-card"), start + 0.35, { y: 40 }, { y: 0, stagger: 0.14, duration: 0.45 });
-  pulse(tl, must(root, ".chapter-badge"), start + 1.6);
-  pulse(tl, must(root, ".chapter-badge"), start + 3.4);
+  enter(tl, must(root, "h2"), start + 0.2, { y: 28 });
+  enter(tl, all(root, ".score-row article"), start + 1.2, { y: 16 }, { y: 0, stagger: 0.12 });
+  enter(tl, all(root, ".tech-row article"), start + 4, { y: 18 }, { y: 0, stagger: 0.2, duration: 0.36 });
 }
 
-function buildB02(beat) {
+function buildMC(beat) {
+  var spec = MC[beat.id];
+  var cards = spec.opts.map(function (pair) {
+    var cls = pair[0] === spec.answer ? "opt is-answer" : "opt is-wrong";
+    return '<article class="' + cls + '" data-letter="' + esc(pair[0]) + '"><b>' + esc(pair[0]) + "</b><span>" + esc(pair[1]) + "</span></article>";
+  }).join("");
   return dom(
-    '<div data-layout="lecture-five" class="board">' +
-      caption(beat.keyword) +
-      explainGrid([
-        { kicker: "第 1 題", mark: "A", title: "數據", body: "原始讀數尚未詮釋" },
-        { kicker: "第 2 題", mark: "B", title: "IPO", body: "選票 · 統計 · 顯示" },
-        { kicker: "第 3 題", mark: "D", title: "非組件", body: "平面圖只是裝飾" },
-        { kicker: "第 4 題", mark: "A", title: "輸入裝置", body: "雨量感測器" },
-        { kicker: "第 5 題", mark: "C", title: "資訊素養", body: "查核作者、日期、來源" }
-      ], 5) +
+    '<div class="scene-mc" data-layout="mc">' +
+      '<p class="mc-kicker">甲部 · 第 ' + esc(spec.n) + " 題</p>" +
+      "<h2>" + esc(spec.title) + "</h2>" +
+      '<p class="focus-line">' + esc(spec.focus) + "</p>" +
+      '<div class="opt-grid">' + cards + "</div>" +
+      '<p class="answer-stamp">答案 ' + esc(spec.answer) + " · " + esc(spec.why) + "</p>" +
     "</div>"
   );
 }
-function tweensB02(tl, root, start) {
-  enter(tl, all(root, ".explain-card"), start + 0.2, { y: 36 }, { y: 0, stagger: 0.16, duration: 0.42 });
-  ink(tl, all(root, ".choice"), start + 1.8, 0.35);
+
+function tweensMC(tl, root, start) {
+  var dur = beatDur(root);
+  enter(tl, must(root, "h2"), start + 0.15, { y: 20 });
+  enter(tl, must(root, ".focus-line"), start + 1.1, { x: -16 });
+  enter(tl, all(root, ".opt"), start + 2.4, { y: 16 }, { y: 0, stagger: 0.1, duration: 0.3 });
+  var wrong = root.querySelectorAll(".opt.is-wrong");
+  var gap = Math.min(4.5, Math.max(1.5, (dur - 16) / Math.max(wrong.length, 1)));
+  Array.prototype.forEach.call(wrong, function (node, index) {
+    tl.call(function () { node.classList.add("is-cut"); }, null, start + 7 + index * gap);
+  });
+  var at = revealAt(root, start, 12);
+  tl.call(function () {
+    var keep = root.querySelector(".opt.is-answer");
+    if (keep) keep.classList.add("is-keep");
+  }, null, at);
+  enter(tl, must(root, ".answer-stamp"), at, { scale: 1.25 }, { scale: 1, duration: 0.32 });
 }
 
-function buildB03(beat) {
+function cards(items) {
+  return items.map(function (item) {
+    return '<article class="explain-card"><p class="explain-kicker">' + esc(item[0]) + "</p><h3>" + esc(item[1]) + "</h3><p>" + esc(item[2]) + "</p></article>";
+  }).join("");
+}
+
+function buildB22() {
   return dom(
-    '<div data-layout="lecture-five" class="board">' +
-      caption(beat.keyword) +
-      explainGrid([
-        { kicker: "第 6 題", mark: "D", title: "有效性檢驗", body: "身高 40–250 厘米" },
-        { kicker: "第 7 題", mark: "C", title: "主關鍵字", body: "全場唯一票號" },
-        { kicker: "第 8 題", mark: "D", title: "直接存取", body: "跳至指定影像幀" },
-        { kicker: "第 9 題", mark: "B", title: "數據控制", body: "準確、完整、獲授權" },
-        { kicker: "第 10 題", mark: "A", title: "存在檢查", body: "必填欄位不得留空" }
-      ], 5) +
+    '<div data-layout="classify">' +
+      '<p class="mc-kicker">乙部 · B1(a) · 網店／倉庫</p>' +
+      "<h2>四項歸類</h2>" +
+      '<div class="explain-grid cols-4">' + cards([
+        ["硬件", "熱敏出貨單打印機", "實體裝置"],
+        ["軟件", "庫存管理應用程式", "可執行程式"],
+        ["數據", "顧客訂單紀錄", "要儲存的事實"],
+        ["程序", "核對貨品指引", "人員依循的步驟"]
+      ]) + "</div>" +
     "</div>"
   );
 }
-function tweensB03(tl, root, start) {
-  enter(tl, all(root, ".explain-card"), start + 0.2, { rotationX: -70, transformOrigin: "center top" }, { rotationX: 0, stagger: 0.14, duration: 0.42 });
-  ink(tl, all(root, ".choice"), start + 1.9, 0.32);
+
+function tweensGrid(tl, root, start) {
+  enter(tl, must(root, "h2"), start + 0.15, { y: 18 });
+  enter(tl, all(root, ".explain-card"), start + 1.2, { y: 16 }, { y: 0, stagger: 0.16, duration: 0.34 });
 }
 
-function buildB04(beat) {
+function buildB23() {
   return dom(
-    '<div data-layout="numbers" class="board">' +
-      caption("位值 · 二進制補碼（two's complement）") +
-      '<div class="explain-grid cols-4">' +
-        '<article class="explain-card"><p class="explain-kicker">第 11 題</p><h3>2B₁₆</h3><p>43 = 2×16 + 11</p></article>' +
-        '<article class="explain-card"><p class="explain-kicker">第 12 題</p><h3>位值 2³</h3><p>101101 由右數第三個 1</p></article>' +
-        '<article class="explain-card"><p class="explain-kicker">第 14 題</p><h3>5 位元組</h3><p>Hello · 每字元 1 byte</p></article>' +
-        '<article class="explain-card"><p class="explain-kicker">第 15 題</p><h3>偶校驗</h3><p>五個 1 → 校驗位設 1</p></article>' +
+    '<div data-layout="devices">' +
+      '<p class="mc-kicker">乙部 · B1(b)</p>' +
+      "<h2>兩種輸入裝置，各加優點</h2>" +
+      '<div class="explain-grid cols-3">' + cards([
+        ["例子", "條碼／QR 掃描器", "輸入快，少鍵錯"],
+        ["例子", "手提數據終端機", "貨架旁即時核對"],
+        ["例子", "RFID 讀取器", "一次讀多件標籤"]
+      ]) + "</div>" +
+      '<p class="warn-line anchor">要寫裝置加優點</p>' +
+    "</div>"
+  );
+}
+
+function tweensB23(tl, root, start) {
+  tweensGrid(tl, root, start);
+  enter(tl, must(root, ".warn-line"), revealAt(root, start, 8), { y: 10 });
+}
+
+function buildB24() {
+  return dom(
+    '<div data-layout="format">' +
+      '<p class="mc-kicker">乙部 · B1(c)</p>' +
+      "<h2>格式檢查</h2>" +
+      '<p class="formula">AB1234</p>' +
+      '<p class="focus-line">兩個大階英文字母 + 四位數字</p>' +
+      '<div class="explain-grid cols-2">' + cards([
+        ["目的", "符合預定格式", "減少無效編碼"],
+        ["不是", "核實／範圍檢查", "重點是字元模式"]
+      ]) + "</div>" +
+    "</div>"
+  );
+}
+
+function tweensB24(tl, root, start) {
+  enter(tl, must(root, ".formula"), start + 0.3, { scale: 0.8 }, { scale: 1 });
+  enter(tl, must(root, ".focus-line"), start + 1.4, { y: 12 });
+  enter(tl, all(root, ".explain-card"), start + 3, { y: 14 }, { y: 0, stagger: 0.16 });
+}
+
+function bitRow(pattern) {
+  return '<div class="bit-row">' + String(pattern).split("").map(function (ch) {
+    return '<span class="bit' + (ch === "1" ? " on" : "") + '">' + esc(ch) + "</span>";
+  }).join("") + "</div>";
+}
+
+function buildB25() {
+  return dom(
+    '<div data-layout="twos">' +
+      '<p class="mc-kicker">乙部 · B2(a) · 二進制補碼</p>' +
+      "<h2>還原 10110010₂</h2>" +
+      '<div class="step-row">' +
+        '<article class="step inkbox"><span>1</span><b>MSB = 1<small>負數</small></b></article>' +
+        '<article class="step inkbox"><span>2</span><b>取反<small>01001101</small></b></article>' +
+        '<article class="step inkbox"><span>3</span><b>加一<small>01001110 = 78</small></b></article>' +
       "</div>" +
-      '<div class="work-strip">' +
-        '<p class="explain-kicker">第 13 題 · 八位元二進制補碼 −53</p>' +
-        '<div class="step-line"><span>00110101</span><b>取反再加一</b><span class="result-bits">11001011</span></div>' +
+      bitRow("10110010") +
+      '<p class="answer-stamp">−78</p>' +
+    "</div>"
+  );
+}
+
+function tweensB25(tl, root, start) {
+  enter(tl, must(root, "h2"), start + 0.15, { y: 16 });
+  enter(tl, all(root, ".step"), start + 1.4, { y: 14 }, { y: 0, stagger: 0.45, duration: 0.34 });
+  enter(tl, must(root, ".bit-row"), start + 4.2, { y: 10 });
+  enter(tl, must(root, ".answer-stamp"), revealAt(root, start, 10), { scale: 1.3 }, { scale: 1 });
+}
+
+function buildB26() {
+  return dom(
+    '<div data-layout="msb">' +
+      '<p class="mc-kicker">乙部 · B2(b)</p>' +
+      "<h2>MSB 是符號位</h2>" +
+      '<div class="pair-grid">' +
+        '<article class="explain-card"><h3>1</h3><p>負數</p></article>' +
+        '<article class="explain-card"><h3>0</h3><p>正數或零</p></article>' +
       "</div>" +
+      '<p class="focus-line">符號位參與計算，並決定正負</p>' +
     "</div>"
   );
 }
-function tweensB04(tl, root, start) {
-  enter(tl, all(root, ".explain-card"), start + 0.2, { y: 24 }, { y: 0, stagger: 0.12 });
-  enter(tl, must(root, ".work-strip"), start + 1.3, { y: 20 }, { y: 0, duration: 0.4 });
-  pulse(tl, must(root, ".result-bits"), start + 2.2);
+
+function tweensB26(tl, root, start) {
+  enter(tl, all(root, ".explain-card"), start + 0.6, { y: 16 }, { y: 0, stagger: 0.2 });
+  enter(tl, must(root, ".focus-line"), start + 3.2, { y: 12 });
 }
 
-function buildB05(beat) {
+function buildB27() {
   return dom(
-    '<div data-layout="images" class="board">' +
-      caption(beat.keyword) +
-      explainGrid([
-        { kicker: "第 16 題", mark: "A", title: "鋸齒失真", body: "點陣圖放大，邊緣變模糊" },
-        { kicker: "第 17 題", mark: "B", title: "65536 色", body: "2¹⁶ 色彩深度" },
-        { kicker: "第 18 題", mark: "D", title: "像素解像度", body: "細節仍然清楚" },
-        { kicker: "第 19 題", mark: "D", title: "約 96 KB", body: "1024×768 ÷ 8 ÷ 1024" },
-        { kicker: "第 20 題", mark: "C", title: "GIF", body: "透明背景＋簡單幀動畫" }
-      ], 5) +
+    '<div data-layout="parity">' +
+      '<p class="mc-kicker">乙部 · B2(c) · 奇校驗</p>' +
+      "<h2>數據位 1011001</h2>" +
+      bitRow("1011001") +
+      '<div class="explain-grid cols-2">' + cards([
+        ["數一", "四個 1", "偶數"],
+        ["校驗位", "設為 1", "合計五個 1"]
+      ]) + "</div>" +
+      '<p class="answer-stamp">奇校驗位 = 1</p>' +
     "</div>"
   );
 }
-function tweensB05(tl, root, start) {
-  enter(tl, all(root, ".explain-card"), start + 0.15, { scale: 0.86 }, { scale: 1, stagger: 0.12, duration: 0.4 });
-  ink(tl, all(root, ".choice"), start + 1.7, 0.28);
+
+function tweensB27(tl, root, start) {
+  enter(tl, must(root, ".bit-row"), start + 0.4, { y: 12 });
+  tweensGrid(tl, root, start + 1);
+  enter(tl, must(root, ".answer-stamp"), revealAt(root, start, 8), { scale: 1.2 }, { scale: 1 });
 }
 
-function buildB06(beat) {
+function buildB28() {
   return dom(
-    '<div data-layout="warehouse-bins" class="board">' +
-      caption("網店訂單／倉庫 · " + beat.keyword) +
-      '<div class="bin-grid">' +
-        '<article class="bin"><p class="bin-item">熱敏出貨單打印機</p><h3>硬件</h3><p>實體裝置</p></article>' +
-        '<article class="bin"><p class="bin-item">庫存管理應用程式</p><h3>軟件</h3><p>可執行程式</p></article>' +
-        '<article class="bin"><p class="bin-item">顧客訂單紀錄</p><h3>數據</h3><p>需儲存的事實</p></article>' +
-        '<article class="bin"><p class="bin-item">核對貨品的作業指引</p><h3>程序</h3><p>人員依循的步驟</p></article>' +
-      "</div>" +
-      stampOf(beat) +
+    '<div data-layout="graphics">' +
+      '<p class="mc-kicker">乙部 · B3(a)</p>' +
+      "<h2>點陣 vs 向量</h2>" +
+      '<div class="pair-grid">' + cards([
+        ["點陣圖", "像素網格", "由點構成"],
+        ["向量圖", "線、曲線、形狀", "數學物件描述"]
+      ]) + "</div>" +
+      '<p class="focus-line">標誌、字型、線條圖較適合向量圖</p>' +
     "</div>"
   );
 }
-function tweensB06(tl, root, start) {
-  enter(tl, all(root, ".bin-item"), start + 0.2, { y: -30 }, { y: 0, stagger: 0.12 });
-  enter(tl, all(root, ".bin h3"), start + 0.7, { y: 24 }, { y: 0, stagger: 0.12 });
-  enter(tl, must(root, ".stamp"), start + 1.8, { scale: 1.2, rotation: -6 }, { scale: 1, rotation: -3 });
+
+function tweensB28(tl, root, start) {
+  tweensGrid(tl, root, start);
+  enter(tl, must(root, ".focus-line"), start + 4, { y: 12 });
 }
 
-function buildB07(beat) {
+function buildB29() {
   return dom(
-    '<div data-layout="input-devices" class="board">' +
-      caption(beat.keyword) +
-      '<div class="device-grid">' +
-        '<article class="device"><h3>條碼／QR 掃描器</h3><p>輸入快，減少人手鍵入錯漏</p></article>' +
-        '<article class="device"><h3>手提數據終端機</h3><p>貨架旁即時核對</p></article>' +
-        '<article class="device"><h3>RFID 讀取器</h3><p>一次讀取多件標籤</p></article>' +
-      "</div>" +
-      '<p class="warn-line"><span class="cross">×</span> 不要把輸出裝置當作輸入 · 要寫裝置加優點</p>' +
+    '<div data-layout="digitise">' +
+      '<p class="mc-kicker">乙部 · B3(b)</p>' +
+      "<h2>取樣與量化</h2>" +
+      '<div class="pair-grid">' + cards([
+        ["取樣", "按間距擷取樣本", "關乎解像度"],
+        ["量化", "連續值對應離散級", "關乎色彩深度"]
+      ]) + "</div>" +
     "</div>"
   );
 }
-function tweensB07(tl, root, start) {
-  enter(tl, all(root, ".device"), start + 0.25, { x: -48 }, { x: 0, stagger: 0.16, duration: 0.42 });
-  enter(tl, must(root, ".warn-line"), start + 1.6, { autoAlpha: 0 }, { autoAlpha: 1, duration: 0.35 });
-}
 
-function buildB08(beat) {
+function buildB30() {
   return dom(
-    '<div data-layout="format-check" class="board">' +
-      caption(beat.keyword) +
-      '<div class="pattern-hero" aria-label="AB1234">' +
-        '<span>A</span><span>B</span><span>1</span><span>2</span><span>3</span><span>4</span>' +
-      "</div>" +
-      '<p class="lede">兩個大寫英文字母＋四位數字 · 格式檢查／類型檢查</p>' +
-      '<div class="purpose-row">' +
-        '<article class="purpose">符合預定格式</article>' +
-        '<article class="purpose">減少無效編碼</article>' +
-        '<article class="purpose">準確 · 一致</article>' +
-      "</div>" +
-      '<p class="warn-line"><span class="cross">×</span> 不是核實　<span class="cross">×</span> 不是範圍檢查</p>' +
-    "</div>"
-  );
-}
-function tweensB08(tl, root, start) {
-  enter(tl, all(root, ".pattern-hero span"), start + 0.15, { y: -20 }, { y: 0, stagger: 0.08, duration: 0.32 });
-  enter(tl, all(root, ".purpose"), start + 1.1, { y: 16 }, { y: 0, stagger: 0.12 });
-  enter(tl, must(root, ".warn-line"), start + 2.0, { autoAlpha: 0 }, { autoAlpha: 1 });
-}
-
-function buildB09(beat) {
-  return dom(
-    '<div data-layout="twos-complement" class="board">' +
-      caption("二進制補碼（two's complement）") +
-      '<ol class="decode">' +
-        '<li><b>讀數</b>' + bitRow("10110010") + "</li>" +
-        '<li><b>MSB = 1</b><span>負數</span></li>' +
-        '<li><b>取反</b>' + bitRow("01001101") + "</li>" +
-        '<li><b>加一</b>' + bitRow("01001110", "sum") + "</li>" +
-        '<li><b>位值</b><span>64 + 8 + 4 + 2 = 78</span></li>' +
-      "</ol>" +
-      '<div class="result-row"><div class="stamp final">−78</div><div class="struck">+78</div></div>' +
-    "</div>"
-  );
-}
-function tweensB09(tl, root, start) {
-  enter(tl, all(root, ".decode li"), start + 0.15, { x: -24 }, { x: 0, stagger: 0.28, duration: 0.36 });
-  enter(tl, must(root, ".stamp.final"), start + 2.4, { scale: 1.3 }, { scale: 1, duration: 0.35 });
-  enter(tl, must(root, ".struck"), start + 3.0, { autoAlpha: 0 }, { autoAlpha: 1, duration: 0.3 });
-}
-
-function buildB10(beat) {
-  return dom(
-    '<div data-layout="sign-bit" class="board">' +
-      caption("二進制補碼 · MSB 符號位") +
-      '<div class="sign-row">' +
-        '<article class="sign-card on-bit"><b>1</b><h3>負數</h3><p>MSB = 1</p></article>' +
-        '<article class="sign-card"><b>0</b><h3>非負</h3><p>正數或零</p></article>' +
-      "</div>" +
-      '<p class="lede">符號位參與數值計算，並決定正負。</p>' +
-      '<p class="warn-line"><span class="cross">×</span> MSB 不是校驗位</p>' +
-    "</div>"
-  );
-}
-function tweensB10(tl, root, start) {
-  enter(tl, all(root, ".sign-card"), start + 0.2, { y: 30 }, { y: 0, stagger: 0.18 });
-  pulse(tl, must(root, ".on-bit b"), start + 1.2);
-  enter(tl, must(root, ".warn-line"), start + 1.8, { autoAlpha: 0 }, { autoAlpha: 1 });
-}
-
-function buildB11(beat) {
-  return dom(
-    '<div data-layout="odd-parity" class="board">' +
-      caption(beat.keyword) +
-      '<div class="parity-board">' +
-        '<p class="explain-kicker">數據位</p>' +
-        bitRow("1011001", "data-bits") +
-        '<p class="lede">四個 1 · 偶數</p>' +
-        '<div class="parity-join"><span>奇校驗位</span><b class="parity-bit">1</b><span>共五個 1 · 奇數</span></div>' +
-      "</div>" +
-      '<p class="warn-line"><span class="cross">×</span> 設 0 是偶校驗思路</p>' +
-    "</div>"
-  );
-}
-function tweensB11(tl, root, start) {
-  enter(tl, all(root, ".data-bits .bit"), start + 0.15, { y: -16 }, { y: 0, stagger: 0.06, duration: 0.28 });
-  ink(tl, all(root, ".data-bits .bit.on"), start + 1.0, 0.12);
-  enter(tl, must(root, ".parity-bit"), start + 1.8, { scale: 0.6 }, { scale: 1, duration: 0.35 });
-  enter(tl, must(root, ".warn-line"), start + 2.5, { autoAlpha: 0 }, { autoAlpha: 1 });
-}
-
-function buildB12(beat) {
-  return dom(
-    '<div data-layout="bitmap-vector" class="board">' +
-      caption(beat.keyword) +
-      '<div class="split">' +
-        '<article class="pane">' +
-          '<h3>點陣圖</h3>' +
-          '<div class="px-grid" aria-hidden="true"></div>' +
-          '<p>由像素網格構成</p>' +
-        "</article>" +
-        '<article class="pane">' +
-          '<h3>向量圖</h3>' +
-          '<svg class="curve" viewBox="0 0 240 120" aria-hidden="true"><path d="M12 96 C 60 8, 120 8, 150 60 S 210 120, 228 28" fill="none" stroke="#000" stroke-width="6"/></svg>' +
-          '<p>線、曲線、形狀定義</p>' +
-        "</article>" +
-      "</div>" +
-      '<p class="lede">標誌 · 字型 · 線條圖 · CAD　可獨立縮放編輯</p>' +
-    "</div>"
-  );
-}
-function tweensB12(tl, root, start) {
-  var grid = must(root, ".px-grid");
-  var i;
-  for (i = 0; i < 48; i++) {
-    var cell = document.createElement("i");
-    if (i % 7 === 0 || i % 5 === 0) cell.className = "on";
-    grid.appendChild(cell);
-  }
-  enter(tl, all(root, ".pane"), start + 0.2, { y: 24 }, { y: 0, stagger: 0.16 });
-  enter(tl, all(root, ".px-grid i"), start + 0.7, { autoAlpha: 0 }, { autoAlpha: 1, stagger: 0.01, duration: 0.2 });
-  var path = must(root, ".curve path");
-  var len = path.getTotalLength();
-  path.style.strokeDasharray = String(len);
-  path.style.strokeDashoffset = String(len);
-  tl.to(path, { strokeDashoffset: 0, duration: 1.1, ease: "power2.inOut" }, start + 0.8);
-}
-
-function buildB13(beat) {
-  return dom(
-    '<div data-layout="sample-quant" class="board">' +
-      caption(beat.keyword) +
-      '<div class="split">' +
-        '<article class="pane">' +
-          '<p class="explain-kicker">1 · 取樣 sampling</p>' +
-          '<h3>量度樣本</h3>' +
-          '<div class="sample-dots" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i></div>' +
-          '<p>關乎解像度或取樣頻率</p>' +
-        "</article>" +
-        '<article class="pane">' +
-          '<p class="explain-kicker">2 · 量化 quantization</p>' +
-          '<h3>離散級別</h3>' +
-          '<div class="level-bars" aria-hidden="true"><i></i><i></i><i></i><i></i></div>' +
-          '<p>關乎色彩深度或位元深度</p>' +
-        "</article>" +
-      "</div>" +
-      '<p class="warn-line"><span class="cross">×</span> 不要把兩個定義對調</p>' +
-    "</div>"
-  );
-}
-function tweensB13(tl, root, start) {
-  enter(tl, all(root, ".pane"), start + 0.2, { x: -30 }, { x: 0, stagger: 0.2 });
-  enter(tl, all(root, ".sample-dots i"), start + 0.8, { scale: 0 }, { scale: 1, stagger: 0.08, duration: 0.25 });
-  tl.fromTo(all(root, ".level-bars i"), { scaleY: 0.2 }, { scaleY: 1, stagger: 0.1, duration: 0.35, transformOrigin: "center bottom" }, start + 1.3);
-  enter(tl, must(root, ".warn-line"), start + 2.2, { autoAlpha: 0 }, { autoAlpha: 1 });
-}
-
-function buildB14(beat) {
-  return dom(
-    '<div data-layout="filesize" class="board">' +
-      caption(beat.keyword) +
+    '<div data-layout="filesize">' +
+      '<p class="mc-kicker">乙部 · B3(c)</p>' +
+      "<h2>估算檔案大小</h2>" +
       '<p class="formula">1920 × 1080 × 24 ÷ 8 ÷ 1024²</p>' +
-      '<div class="formula-steps">' +
-        '<article><b>6,220,800</b><span>位元組</span></article>' +
-        '<span class="arrow">÷</span>' +
-        '<article><b>1,048,576</b><span>1024²</span></article>' +
-        '<span class="arrow">=</span>' +
-        '<article class="formula-result"><b>5.93 MB</b><span>接受 5.93–5.94</span></article>' +
+      '<div class="formula-steps explain-grid">' +
+        '<article class="inkbox"><b>6,220,800</b><span>位元組</span></article>' +
+        '<span class="arrow">→</span>' +
+        '<article class="inkbox formula-result"><b>≈ 5.93 MB</b><span>接受 5.93–5.94</span></article>' +
       "</div>" +
-      '<p class="warn-line"><span class="cross">×</span> 不要用 1000²　<span class="cross">×</span> 不要忘記 ÷8</p>' +
     "</div>"
   );
-}
-function tweensB14(tl, root, start) {
-  enter(tl, must(root, ".formula"), start + 0.15, { y: -16 }, { y: 0 });
-  enter(tl, all(root, ".formula-steps article"), start + 0.7, { y: 20 }, { y: 0, stagger: 0.2 });
-  pulse(tl, must(root, ".formula-result"), start + 2.0);
-  enter(tl, must(root, ".warn-line"), start + 2.6, { autoAlpha: 0 }, { autoAlpha: 1 });
 }
 
-function buildB15(beat) {
+function tweensB30(tl, root, start) {
+  enter(tl, must(root, ".formula"), start + 0.3, { y: -12 });
+  enter(tl, all(root, ".formula-steps article"), start + 2.2, { y: 14 }, { y: 0, stagger: 0.35 });
+}
+
+function buildB31() {
   return dom(
-    '<div data-layout="outro" class="board">' +
-      caption(beat.keyword) +
-      '<div class="recap-row">' +
-        '<article class="recap-panel"><h3>−78</h3><p>二進制補碼還原</p></article>' +
-        '<article class="recap-panel"><h3>校驗位 1</h3><p>奇校驗</p></article>' +
-        '<article class="recap-panel"><h3>5.93 MB</h3><p>圖像檔大小</p></article>' +
-      "</div>" +
-      '<p class="lede">有疑問就重播難點段落</p>' +
-      stampOf(beat) +
+    '<div data-layout="outro">' +
+      '<p class="mc-kicker">Mock 講解</p>' +
+      "<h2>重播難點</h2>" +
+      '<div class="explain-grid cols-3 recap-row">' + cards([
+        ["B2(a)", "−78", "二進制補碼"],
+        ["B2(c)", "校驗位 1", "奇校驗"],
+        ["B3(c)", "5.93 MB", "1024 的二次方"]
+      ]) + "</div>" +
+      '<p class="focus-line">甲部：先標重點、剔錯項，最後先填答案字母</p>' +
     "</div>"
   );
 }
-function tweensB15(tl, root, start) {
-  enter(tl, all(root, ".recap-panel"), start + 0.2, { y: -24 }, { y: 0, stagger: 0.14, duration: 0.42 });
-  enter(tl, must(root, ".stamp"), start + 1.2, { scale: 1.25, rotation: -8 }, { scale: 1, rotation: -4, duration: 0.4 });
+
+function tweensB31(tl, root, start) {
+  tweensGrid(tl, root, start);
+  enter(tl, must(root, ".focus-line"), start + 3.4, { y: 12 });
 }
 
 var SCENE_BUILDERS = {
   B01: buildB01,
-  B02: buildB02,
-  B03: buildB03,
-  B04: buildB04,
-  B05: buildB05,
-  B06: buildB06,
-  B07: buildB07,
-  B08: buildB08,
-  B09: buildB09,
-  B10: buildB10,
-  B11: buildB11,
-  B12: buildB12,
-  B13: buildB13,
-  B14: buildB14,
-  B15: buildB15
+  B22: buildB22,
+  B23: buildB23,
+  B24: buildB24,
+  B25: buildB25,
+  B26: buildB26,
+  B27: buildB27,
+  B28: buildB28,
+  B29: buildB29,
+  B30: buildB30,
+  B31: buildB31
 };
 
 var SCENE_TWEENS = {
   B01: tweensB01,
-  B02: tweensB02,
-  B03: tweensB03,
-  B04: tweensB04,
-  B05: tweensB05,
-  B06: tweensB06,
-  B07: tweensB07,
-  B08: tweensB08,
-  B09: tweensB09,
-  B10: tweensB10,
-  B11: tweensB11,
-  B12: tweensB12,
-  B13: tweensB13,
-  B14: tweensB14,
-  B15: tweensB15
+  B22: tweensGrid,
+  B23: tweensB23,
+  B24: tweensB24,
+  B25: tweensB25,
+  B26: tweensB26,
+  B27: tweensB27,
+  B28: tweensB28,
+  B29: tweensGrid,
+  B30: tweensB30,
+  B31: tweensB31
 };
+
+Object.keys(MC).forEach(function (id) {
+  SCENE_BUILDERS[id] = buildMC;
+  SCENE_TWEENS[id] = tweensMC;
+});
 
 function buildScene(beat) {
   var fn = SCENE_BUILDERS[beat.id];
@@ -462,6 +376,7 @@ function buildScene(beat) {
   node.classList.add("scene");
   node.id = "scene-" + beat.id;
   node.dataset.beat = beat.id;
+  node.dataset.duration = String(beat.duration_s);
   return node;
 }
 

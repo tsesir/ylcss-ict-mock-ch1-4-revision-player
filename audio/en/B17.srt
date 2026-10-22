@@ -1,0 +1,36 @@
+1
+00:00:00,000 --> 00:00:08,614
+Question sixteen. Highlight: a “bitmap” drawing “enlarged several times” for large outdoor print — what is most likely?
+
+2
+00:00:08,614 --> 00:00:13,682
+Useful: bitmaps are pixel grids; enlarge and edges go soft and jagged.
+
+3
+00:00:13,682 --> 00:00:17,880
+Useless: art-class setting — does not change the artefact.
+
+4
+00:00:17,880 --> 00:00:20,631
+Option A. Blurred jagged edges — keep.
+
+5
+00:00:20,631 --> 00:00:25,481
+Option B. File must shrink: enlarge for print ≠ smaller file — cut.
+
+6
+00:00:25,481 --> 00:00:29,390
+Option C. Colours auto-brighter: not inevitable — cut.
+
+7
+00:00:29,390 --> 00:00:34,095
+Option D. Stays vector-sharp after enlarge: bitmaps cannot — cut.
+
+8
+00:00:34,095 --> 00:00:37,715
+Bitmap enlarge most often shows jagged distortion.
+
+9
+00:00:37,715 --> 00:00:40,176
+Therefore the correct answer is A.
+

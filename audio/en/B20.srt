@@ -1,0 +1,36 @@
+1
+00:00:00,000 --> 00:00:12,512
+Question nineteen. Highlight: uncompressed mono; one thousand twenty-four by seven hundred sixty-eight; one bit per pixel; one K B = one thousand twenty-four bytes.
+
+2
+00:00:12,512 --> 00:00:18,157
+Useful: total bits ÷ eight → bytes, then ÷ one thousand twenty-four → K B.
+
+3
+00:00:18,157 --> 00:00:21,743
+Useless: mono story colour — formula unchanged.
+
+4
+00:00:21,743 --> 00:00:26,931
+Option A. Seven hundred sixty-eight K B: often missed ÷ eight — cut.
+
+5
+00:00:26,931 --> 00:00:32,576
+Option B. One thousand twenty-four K B: mistaking one side for size — cut.
+
+6
+00:00:32,576 --> 00:00:37,611
+Option C. One hundred ninety-two K B: common mid-step error — cut.
+
+7
+00:00:37,611 --> 00:00:40,053
+Option D. Ninety-six K B — keep.
+
+8
+00:00:40,053 --> 00:00:49,894
+One thousand twenty-four times seven hundred sixty-eight, divided by eight, divided by one thousand twenty-four ≈ ninety-six K B.
+
+9
+00:00:49,894 --> 00:00:52,488
+Therefore the correct answer is D.
+

@@ -1,13 +1,13 @@
 # 模擬測驗講解／Mock 講解 · Book A Ch1–4
 
-YLCSS S4 ICT 純播放旁白講解。培進 Book A 第一章至第四章，15 節。沒有練習、選擇題作答或答題紙。
+YLCSS S4 ICT 純播放旁白講解。培進 Book A 第一章至第四章，31 節。沒有練習、選擇題作答或答題紙。
 
 播放器外殼對齊 [ICT 第4章](https://github.com/tsesir/ylcss-ch4-revision-player) 同 [S4 ICT 第1–3章](https://github.com/tsesir/ylcss-ict-ch1-3-revision-players)。
 
 | 項目 | 值 |
 |------|-----|
-| 節數 | 15（B01–B15） |
-| `js/beats.js` 總長 | **620.4 秒** |
+| 節數 | 31（B01 開場 · B02–B21 甲部逐題 · B22–B30 乙部 · B31 結尾） |
+| `js/beats.js` 總長 | **1574.8 秒**（約 26.2 分鐘） |
 | 聲線 | 粵語、普通話、English |
 | 情境 | 網店訂單／倉庫；二進制補碼、奇偶校驗、圖像檔大小 |
 
@@ -49,7 +49,7 @@ Notion 用 `/embed` 貼上面網址。根目錄有 `_headers`（`frame-ancestors
 
 ## 聲軌
 
-- `audio/{yue,cmn,en}/B01.mp3` … `B15.mp3`，同名 `.vtt` 與 `.srt`
+- `audio/{yue,cmn,en}/B01.mp3` … `B31.mp3`，同名 `.vtt` 與 `.srt`（93 段，逐節播放，不解整軌）
 - `audio/manifest.json` 列出 `lang`、`beat`、`duration_s`
 - 粵語／普通話：英文片段前後 EN pad **0.05 秒**，已燒錄在 mp3。English 聲線沒有 EN pad。
 - 粵語「正」以 zing3 合成；字幕仍寫「正」。

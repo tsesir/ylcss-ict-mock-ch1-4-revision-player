@@ -1,19 +1,28 @@
 WEBVTT
 
-00:00:00.000 --> 00:00:06.528
-Section B question two part (c). Data bits one zero one one zero zero one — odd parity.
+00:00:00.000 --> 00:00:09.266
+Question ten. Highlight: some fields are “required”; before submit the system checks they “have content” and “must not be blank”.
 
-00:00:06.528 --> 00:00:09.304
-Count the ones: four — an even count.
+00:00:09.266 --> 00:00:13.647
+Useful: checking that something was entered = presence check.
 
-00:00:09.304 --> 00:00:15.232
-Odd parity needs the total number of ones, including the parity bit, to be odd.
+00:00:13.647 --> 00:00:18.603
+Useless: inter-school contest theme — does not change the check type.
 
-00:00:15.232 --> 00:00:17.408
-So set the parity bit to one.
+00:00:18.603 --> 00:00:20.901
+Option A. Presence check — keep.
 
-00:00:17.408 --> 00:00:21.160
-After that there are five ones — odd, as required.
+00:00:20.901 --> 00:00:25.427
+Option B. Range check: numeric bounds; stem has no range — cut.
 
-00:00:21.160 --> 00:00:24.912
-Setting zero is even-parity thinking — wrong here.
+00:00:25.427 --> 00:00:30.383
+Option C. Type check: correct data type; stem focuses on blank — cut.
+
+00:00:30.383 --> 00:00:34.764
+Option D. Check digit: checksum maths; not in the stem — cut.
+
+00:00:34.764 --> 00:00:37.278
+Must not be blank = presence check.
+
+00:00:37.278 --> 00:00:39.720
+Therefore the correct answer is A.

@@ -1,24 +1,36 @@
 1
-00:00:00,000 --> 00:00:03,381
-Section B question three part (c). Estimate file size.
+00:00:00,000 --> 00:00:07,034
+Question thirteen. Highlight: represent “minus fifty-three” in “eight-bit two's complement”.
 
 2
-00:00:03,381 --> 00:00:12,460
-One thousand nine hundred twenty times one thousand eighty times twenty-four, divided by eight, then divided by one thousand twenty-four squared.
+00:00:07,034 --> 00:00:12,386
+Useful: write plus fifty-three in eight bits, then invert and add one.
 
 3
-00:00:12,460 --> 00:00:20,788
-First get six million two hundred twenty thousand eight hundred; divide by one million forty-eight thousand five hundred seventy-six.
+00:00:12,386 --> 00:00:16,821
+Useless: I o T wording — does not change the encode steps.
 
 4
-00:00:20,788 --> 00:00:22,792
-About five point nine three M B.
+00:00:16,821 --> 00:00:23,855
+Option A. Zero zero one one zero one zero one: that is plus fifty-three, not inverted — cut.
 
 5
-00:00:22,792 --> 00:00:26,110
-Accept five point nine three to five point nine four.
+00:00:23,855 --> 00:00:29,283
+Option B. One zero one one zero one zero zero: wrong bit pattern — cut.
 
 6
-00:00:26,110 --> 00:00:33,624
-Use one thousand twenty-four squared — not one thousand squared; do not forget divide by eight to convert bits to bytes.
+00:00:29,283 --> 00:00:35,400
+Option C. One one zero zero one zero one one: invert-then-add-one result — keep.
+
+7
+00:00:35,400 --> 00:00:40,599
+Option D. Zero one zero zero one zero one one: wrong sign bit — cut.
+
+8
+00:00:40,599 --> 00:00:48,856
+Fifty-three → zero zero one one zero one zero one; invert then add one → one one zero zero one zero one one.
+
+9
+00:00:48,856 --> 00:00:51,456
+Therefore the correct answer is C.
 

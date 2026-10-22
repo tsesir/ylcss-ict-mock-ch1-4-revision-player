@@ -1,0 +1,19 @@
+WEBVTT
+
+00:00:00.000 --> 00:00:05.374
+Part (c). Data bits one zero one one zero zero one, using odd parity.
+
+00:00:05.374 --> 00:00:08.255
+Count the ones: four — an even count.
+
+00:00:08.255 --> 00:00:13.162
+Odd parity needs an odd total of ones including the parity bit.
+
+00:00:13.162 --> 00:00:15.420
+So set the parity bit to one.
+
+00:00:15.420 --> 00:00:19.314
+After that there are five ones — odd, as required.
+
+00:00:19.314 --> 00:00:23.208
+Setting zero is the even-parity idea — wrong here.

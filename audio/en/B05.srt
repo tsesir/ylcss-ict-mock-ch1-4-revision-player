@@ -1,20 +1,36 @@
 1
-00:00:00,000 --> 00:00:05,576
-Question sixteen: answer A. Enlarging a bitmap often blurs edges into jagged distortion.
+00:00:00,000 --> 00:00:07,011
+Question four. Highlight: a “rain sensor” used to “measure” live rainfall — what class of device?
 
 2
-00:00:05,576 --> 00:00:14,068
-Question seventeen: answer B. Sixteen-bit colour depth gives two to the sixteen colours — sixty-five thousand five hundred thirty-six.
+00:00:07,011 --> 00:00:11,564
+Useful: a sensor feeds measured values into the system = input.
 
 3
-00:00:14,068 --> 00:00:20,278
-Question eighteen: answer D. Clear detail on a larger screen mainly needs higher pixel resolution.
+00:00:11,564 --> 00:00:16,479
+Useless: where the weather station sits — does not change the class.
 
 4
-00:00:20,278 --> 00:00:30,670
-Question nineteen: answer D. One thousand twenty-four times seven hundred sixty-eight, divided by eight, divided by one thousand twenty-four — about ninety-six K B.
+00:00:16,479 --> 00:00:18,647
+Option A. Input device — keep.
 
 5
-00:00:30,670 --> 00:00:36,120
-Question twenty: answer C. Transparency plus simple frame animation — G I F fits best.
+00:00:18,647 --> 00:00:23,273
+Option B. Output device: a sensor does not output results — cut.
+
+6
+00:00:23,273 --> 00:00:27,609
+Option C. Display device: stem never mentions display — cut.
+
+7
+00:00:27,609 --> 00:00:31,874
+Option D. Print device: stem never mentions printing — cut.
+
+8
+00:00:31,874 --> 00:00:35,271
+Measure then feed in — that is an input device.
+
+9
+00:00:35,271 --> 00:00:37,728
+Therefore the correct answer is A.
 
