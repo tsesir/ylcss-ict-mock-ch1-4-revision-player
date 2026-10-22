@@ -21,6 +21,10 @@ var hudBeat = null;
 var scrubbing = false;
 var activeAudio = null;
 var pool = {};
+var clipCache = {};
+var warmKey = "";
+var syncedKey = "";
+var lastSeekAt = 0;
 var audioMeta = {
   yue: { ready: false, durations: {}, missing: [] },
   cmn: { ready: false, durations: {}, missing: [] },
@@ -153,12 +157,13 @@ function seedPack() {
       cueBook[lang.id][beat.id] = list.slice();
     });
     audioMeta[lang.id] = { ready: missing.length === 0, durations: durations, missing: missing };
-    if (audioMeta[lang.id].ready) buildPool(lang.id);
+    pool[lang.id] = pool[lang.id] || {};
   });
   voiceLang = null;
   LANGS.forEach(function (lang) {
     if (!voiceLang && audioMeta[lang.id].ready) voiceLang = lang.id;
   });
+  if (voiceLang) warmAround(voiceLang, 0);
 }
 
 function contentDuration(beat) {
@@ -204,13 +209,67 @@ function captureAnchor() {
 }
 
 function stopAudio() {
-  if (activeAudio) activeAudio.pause();
-  activeAudio = null;
-  Object.keys(pool).forEach(function (lang) {
-    Object.keys(pool[lang]).forEach(function (id) {
-      pool[lang][id].pause();
-    });
+  syncedKey = "";
+  Object.keys(clipCache).forEach(function (key) {
+    clipCache[key].pause();
   });
+  activeAudio = null;
+}
+
+function clipKey(lang, id) {
+  return lang + "/" + id;
+}
+
+function acquireClip(lang, id) {
+  var key = clipKey(lang, id);
+  var audio = clipCache[key];
+  if (audio) return audio;
+  audio = new Audio(audioUrl(lang, id));
+  audio.preload = "auto";
+  audio.playsInline = true;
+  audio.setAttribute("playsinline", "");
+  clipCache[key] = audio;
+  return audio;
+}
+
+function pruneClips(lang, keepIds) {
+  var keep = {};
+  keepIds.forEach(function (id) { keep[clipKey(lang, id)] = true; });
+  Object.keys(clipCache).forEach(function (key) {
+    if (keep[key]) return;
+    var el = clipCache[key];
+    el.pause();
+    el.removeAttribute("src");
+    try { el.load(); } catch (err) {}
+    delete clipCache[key];
+  });
+}
+
+function warmAround(lang, index) {
+  if (!lang || !CH4_BEATS.length) return;
+  var ids = [CH4_BEATS[index].id];
+  if (index + 1 < CH4_BEATS.length) ids.push(CH4_BEATS[index + 1].id);
+  var key = lang + ":" + ids.join(",");
+  if (warmKey === key) return;
+  warmKey = key;
+  ids.forEach(function (id) { acquireClip(lang, id); });
+  pruneClips(lang, ids);
+}
+
+function armPlay(audio) {
+  if (!audio || audio.__arm) return;
+  audio.__arm = true;
+  var pending = audio.play();
+  if (pending && typeof pending.then === "function") {
+    pending.then(function () { audio.__arm = false; }, function () { audio.__arm = false; });
+  } else {
+    audio.__arm = false;
+  }
+}
+
+function applyRate(audio) {
+  if (!audio) return;
+  if (Math.abs(audio.playbackRate - speed) > 0.001) audio.playbackRate = speed;
 }
 
 function buildMaster() {
@@ -304,76 +363,67 @@ function syncTransportOverlays(playing, t, dur) {
   stageReplayBtn.hidden = !showReplay;
 }
 
-function parkTime(audio, seconds) {
-  if (audio.seeking) return;
-  if (Math.abs(audio.currentTime - seconds) <= 0.28) {
-    audio.__seekTo = null;
-    return;
-  }
-  if (audio.__seekTo != null && Math.abs(audio.__seekTo - seconds) < 0.35) return;
-  audio.__seekTo = seconds;
-  try { audio.currentTime = seconds; } catch (err) { audio.__seekTo = null; }
-}
-
 function syncAudio() {
-  if (!master) return;
+  if (!master || !voiceLang) return;
   var t = master.time();
   var item = itemAt(t);
   var local = t - item.start;
-  var meta = voiceLang ? audioMeta[voiceLang] : null;
+  var meta = audioMeta[voiceLang];
   var clip = meta && meta.durations[item.beat.id] ? meta.durations[item.beat.id] : 0;
   var playing = !!(master.isActive() && t < master.duration() - 0.02);
   var inVo = !!(meta && meta.ready && clip && local >= 0 && local < Math.min(clip, item.content) - 0.04);
-  var audio = voiceLang && pool[voiceLang] ? pool[voiceLang][item.beat.id] : null;
-  Object.keys(pool).forEach(function (lang) {
-    Object.keys(pool[lang]).forEach(function (id) {
-      var other = pool[lang][id];
-      if (other !== audio) other.pause();
-    });
-  });
-  if (!audio || !clip) {
-    if (activeAudio) activeAudio.pause();
-    activeAudio = null;
+  if (!inVo || scrubbing) {
+    if (activeAudio && !activeAudio.paused) activeAudio.pause();
     return;
   }
+  warmAround(voiceLang, item.index);
+  var audio = acquireClip(voiceLang, item.beat.id);
   if (activeAudio && activeAudio !== audio) activeAudio.pause();
   activeAudio = audio;
-  var parked = Math.min(Math.max(0, local), Math.max(0, clip - 0.05));
-  if (!inVo) {
-    audio.pause();
-    if (local >= clip) parkTime(audio, Math.max(0, clip - 0.05));
-    else parkTime(audio, parked);
+  applyRate(audio);
+  var dest = Math.min(Math.max(0, local), Math.max(0, clip - 0.05));
+  var drift = Math.abs((audio.currentTime || 0) - dest);
+  var key = clipKey(voiceLang, item.beat.id);
+  var beatChanged = syncedKey !== key;
+  var now = performance.now();
+  var cooling = now - lastSeekAt < 800;
+  if (audio.seeking || (cooling && !beatChanged)) {
+    if (playing && audio.paused && !audio.seeking && audio.readyState >= 2) armPlay(audio);
     return;
   }
-  var dest = Math.min(local, Math.max(0, clip - 0.05));
-  audio.playbackRate = speed;
-  if (audio.seeking) return;
-  if (Math.abs(audio.currentTime - dest) > 0.28) {
-    parkTime(audio, dest);
+  if (beatChanged && dest > 0.05 && audio.readyState < 1) {
+    audio.__dest = dest;
+    if (!audio.__metaHook) {
+      audio.__metaHook = true;
+      audio.addEventListener("loadedmetadata", function onMeta() {
+        audio.removeEventListener("loadedmetadata", onMeta);
+        var want = Number(audio.__dest) || 0;
+        if (want > 0.05) {
+          try { audio.currentTime = want; } catch (err) {}
+        }
+      });
+    }
+    lastSeekAt = now;
+    syncedKey = key;
+    if (playing) armPlay(audio);
     return;
   }
-  audio.__seekTo = null;
+  var largeDrift = drift > (playing ? 0.6 : 0.12);
+  if ((beatChanged && drift > 0.08) || largeDrift) {
+    try { audio.currentTime = dest; } catch (err) {}
+    lastSeekAt = now;
+  }
+  syncedKey = key;
   if (!playing) {
     audio.pause();
     return;
   }
-  if (audio.paused) {
-    if (audio.__arm) return;
-    audio.__arm = true;
-    var pending = audio.play();
-    if (pending && pending.then) {
-      pending.then(function () { audio.__arm = false; }, function () {});
-    } else {
-      audio.__arm = false;
-    }
-  }
+  if (audio.paused) armPlay(audio);
 }
 
 function clearAudioArms() {
-  Object.keys(pool).forEach(function (lang) {
-    Object.keys(pool[lang]).forEach(function (beatId) {
-      pool[lang][beatId].__arm = false;
-    });
+  Object.keys(clipCache).forEach(function (key) {
+    clipCache[key].__arm = false;
   });
 }
 
@@ -526,12 +576,8 @@ function setVoice(lang) {
 }
 
 function buildPool(lang) {
-  pool[lang] = {};
-  CH4_BEATS.forEach(function (beat) {
-    var audio = new Audio(audioUrl(lang, beat.id));
-    audio.preload = "auto";
-    pool[lang][beat.id] = audio;
-  });
+  pool[lang] = pool[lang] || {};
+  if (voiceLang === lang) warmAround(lang, 0);
 }
 
 function durationsChanged(lang, next) {
@@ -609,6 +655,7 @@ function refreshFromFiles() {
       if (durationsChanged(lang.id, map) || audioMeta[lang.id].ready !== ready) {
         audioMeta[lang.id] = { ready: ready, durations: map, missing: missing };
         if (ready && !pool[lang.id]) buildPool(lang.id);
+        if (ready && voiceLang === lang.id) warmKey = "";
         changed = true;
       }
     });
@@ -798,7 +845,9 @@ function init() {
   window.addEventListener("resize", fitStage);
   updateVoiceButtons();
   writeStatus();
-  refreshFromFiles();
+  var warmFiles = function () { refreshFromFiles(); };
+  if (window.requestIdleCallback) requestIdleCallback(warmFiles, { timeout: 1800 });
+  else setTimeout(warmFiles, 900);
 }
 
 init();
